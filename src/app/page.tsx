@@ -5,11 +5,32 @@ export default function Home() {
 
         {/* Hero */}
         <section className="space-y-6">
-          <h1 className="text-5xl font-semibold tracking-tight">
-            Rick Imai
-          </h1>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <h1 className="text-5xl font-semibold tracking-tight">
+              Rick Imai
+            </h1>
 
-          <div className="mt-3 inline-flex items-center gap-3">
+            <div className="flex gap-4">
+              <a
+                href="/resumes/Rick_Imai_Resume_Infrastructure_Governance_FinOps.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 rounded-md bg-neutral-900 text-white hover:bg-neutral-800"
+              >
+                Download Resume (PDF)
+              </a>
+              <a
+                href="https://linkedin.com/in/rickimai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 rounded-md border"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-1 inline-flex items-center gap-3">
             <p className="text-xl text-neutral-600">
               Staff Technical Program Manager | Director, Technical Program Management
             </p>
@@ -28,25 +49,6 @@ export default function Home() {
             of telemetry, reduce infrastructure cost, and improve reliability for engineering
             and security teams.
           </p>
-
-          <div className="flex gap-4 pt-4">
-            <a
-              href="/resumes/Rick_Imai_Resume_Infrastructure_Governance_FinOps.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2 rounded-md bg-neutral-900 text-white hover:bg-neutral-800"
-            >
-              Download Resume (PDF)
-            </a>
-            <a
-              href="https://linkedin.com/in/rickimai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2 rounded-md border"
-            >
-              LinkedIn
-            </a>
-          </div>
         </section>
 
 
