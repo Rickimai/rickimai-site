@@ -27,7 +27,7 @@ export default function Home() {
             <a href="/work" className="px-5 py-2 rounded-md bg-black text-white">
               View Work
             </a>
-            <a href="/resume.pdf" className="px-5 py-2 rounded-md border">
+            <a href="/resumes/Rick_Imai_Resume_Infrastructure_Governance_FinOps.pdf" className="px-5 py-2 rounded-md border">
               Resume
             </a>
             <a href="https://linkedin.com" className="px-5 py-2 rounded-md border">
