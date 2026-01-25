@@ -197,6 +197,44 @@ export default function SkillsPage() {
         </div>
       </section>
 
+          {/* Quick Skills Summary */}
+          <section className="section-padding border-t border-neutral-200">
+            <div className="container-custom">
+              <div className="mx-auto max-w-4xl">
+                <h2 className="heading-2 text-neutral-900">Technical Expertise, Program Management, Leadership</h2>
+                <div className="mt-6 grid gap-6 sm:grid-cols-3">
+                  <div className="card">
+                    <h3 className="font-semibold text-neutral-900">Technical Expertise</h3>
+                    <ul className="mt-3 text-sm text-neutral-700 list-disc pl-5 space-y-2">
+                      <li>AWS ecosystem (S3, EC2, Lake Formation, Glue, Athena, etc.)</li>
+                      <li>Data platforms (Trino, Iceberg, distributed systems)</li>
+                      <li>Infrastructure automation and scaling</li>
+                    </ul>
+                  </div>
+
+                  <div className="card">
+                    <h3 className="font-semibold text-neutral-900">Program Management</h3>
+                    <ul className="mt-3 text-sm text-neutral-700 list-disc pl-5 space-y-2">
+                      <li>FinOps and cloud cost optimization</li>
+                      <li>Infrastructure governance frameworks</li>
+                      <li>Strategic roadmap planning</li>
+                      <li>Cross-organizational execution</li>
+                    </ul>
+                  </div>
+
+                  <div className="card">
+                    <h3 className="font-semibold text-neutral-900">Leadership</h3>
+                    <ul className="mt-3 text-sm text-neutral-700 list-disc pl-5 space-y-2">
+                      <li>Executive stakeholder alignment</li>
+                      <li>Technical decision facilitation</li>
+                      <li>Team mentorship and development</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
       {/* Signature Strengths */}
       <section className="section-padding">
         <div className="container-custom">

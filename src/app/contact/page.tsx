@@ -105,6 +105,15 @@ export default function ContactPage() {
                   the channels below.
                 </p>
 
+                <div className="mt-6 rounded-lg border border-neutral-200 bg-neutral-50 p-4">
+                  <h3 className="font-semibold text-neutral-900">I'm currently exploring Staff TPM and Director-level opportunities.</h3>
+                  <div className="mt-3 text-sm text-neutral-700 space-y-1">
+                    <div>📧 Email: rick.imai@gmail.com</div>
+                    <div>💼 LinkedIn: linkedin.com/in/rickimai</div>
+                    <div>📍 Location: Irvine, CA (open to remote)</div>
+                  </div>
+                </div>
+
                 <div className="mt-8 space-y-4">
                   {contactInfo.map((item) => (
                     <div key={item.label} className="flex items-center gap-4">
