@@ -44,6 +44,7 @@ const values = [
 ];
 
 const interests = [
+  { icon: Heart, label: "My Family" },
   { icon: CookingPot, label: "Cooking" },
   { icon: Coffee, label: "Coffee Enthusiast" },
   { icon: Music, label: "Hip-Hop & Reggae" },
@@ -95,7 +96,7 @@ export default function AboutPage() {
                 <div className="mt-6 space-y-3">
                   <div className="flex items-center gap-3 text-neutral-400">
                     <MapPin className="h-5 w-5 text-primary-500" />
-                    <span>Seattle, WA</span>
+                    <span>Irvine, CA</span>
                   </div>
                   <div className="flex items-center gap-3 text-neutral-400">
                     <Briefcase className="h-5 w-5 text-primary-500" />
