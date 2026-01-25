@@ -1,0 +1,8 @@
+Add your files here:
+
+1. rick-imai-resume.pdf - Your resume PDF file for download
+2. profile-photo.jpg - Your professional headshot (optional)
+3. og-image.jpg - Social media preview image (1200x630px recommended)
+4. favicon.ico - Site favicon
+
+These files will be served from the root of your domain.
