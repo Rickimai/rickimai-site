@@ -10,6 +10,12 @@ export const metadata: Metadata = {
 
 const resumeArchetypes = [
   {
+    title: "Full Profile (General)",
+    description:
+      "A complete view of experience across data platforms, cost governance, security programs, and technical program leadership.",
+    href: "/resumes/Rick_Imai_Resume_Full_Profile.pdf",
+  },
+  {
     title: "Infrastructure Governance & FinOps",
     description:
       "Best for roles focused on cloud cost governance, capacity planning, and shared platform ownership.",
@@ -38,12 +44,6 @@ const resumeArchetypes = [
     description:
       "Best for portfolio planning, prioritization, operating cadences, and executive-level program governance.",
     href: "/resumes/Rick_Imai_Resume_Portfolio_Enterprise_Program_Leadership.pdf",
-  },
-  {
-    title: "Full Profile (General)",
-    description:
-      "A complete view of experience across data platforms, cost governance, security programs, and technical program leadership.",
-    href: "/resumes/Rick_Imai_Resume_Full_Profile.pdf",
   },
 ];
 
