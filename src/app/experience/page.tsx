@@ -17,8 +17,8 @@ const experiences = [
   {
     company: "Amazon Web Services (AWS)",
     role: "Senior Technical Program Manager",
-    period: "2022 - Present",
-    location: "Seattle, WA",
+    period: "2021 - Present",
+    location: "San Diego, CA",
     current: true,
     description:
       "Leading security data platforms and enterprise-wide initiatives with significant budget oversight and cross-functional program delivery.",
@@ -34,8 +34,8 @@ const experiences = [
   {
     company: "Charles Schwab",
     role: "Managing Director, Cybersecurity Portfolio",
-    period: "2018 - 2022",
-    location: "San Francisco, CA",
+    period: "2019 - 2021",
+    location: "Westlake,TX",
     current: false,
     description:
       "Directed a cybersecurity portfolio spanning threat intelligence, incident response, and security operations in a regulated environment.",
@@ -51,7 +51,7 @@ const experiences = [
   {
     company: "Experian",
     role: "Senior Director, Cybersecurity PMO",
-    period: "2015 - 2018",
+    period: "2015 - 2019",
     location: "Costa Mesa, CA",
     current: false,
     description:
