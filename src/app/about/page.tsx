@@ -6,7 +6,8 @@ import {
   Briefcase,
   Heart,
   Coffee,
-  Mountain,
+  CookingPot,
+  Dog,
   Music,
   BookOpen,
   ArrowRight,
@@ -42,10 +43,11 @@ const values = [
 ];
 
 const interests = [
-  { icon: Mountain, label: "Hiking & Outdoors" },
+  { icon: CookingPot, label: "Cooking" },
   { icon: Coffee, label: "Coffee Enthusiast" },
-  { icon: Music, label: "Jazz & Classical" },
-  { icon: BookOpen, label: "Leadership Books" },
+  { icon: Music, label: "Hip-Hop & Reggae" },
+  { icon: BookOpen, label: "Leadership, Technology and Personal DevelopmentBooks" },
+  { icon: Dog, Label: "My English Bulldog"}
 ];
 
 export default function AboutPage() {
