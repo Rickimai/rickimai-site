@@ -21,14 +21,14 @@ const experiences = [
     location: "Seattle, WA",
     current: true,
     description:
-      "Leading security data platforms and enterprise-wide security initiatives with significant budget oversight and cross-functional program delivery.",
+      "Leading security data platforms and enterprise-wide initiatives with significant budget oversight and cross-functional program delivery.",
     achievements: [
-      "Lead security data platforms with $80M annual budget oversight, ensuring efficient resource allocation and ROI tracking",
-      "Drive end-to-end program delivery for enterprise security initiatives spanning multiple AWS organizations",
-      "Establish and maintain strategic partnerships with engineering, security, and business stakeholders",
-      "Develop and execute multi-year roadmaps aligning security investments with business objectives",
-      "Implement program governance frameworks improving delivery predictability by 40%",
-      "Champion data-driven decision making through comprehensive metrics and reporting systems",
+      "Led security data platforms with $80M annual budget oversight, ensuring efficient resource allocation and cost governance",
+      "Drove end-to-end program delivery for enterprise security initiatives spanning multiple organizations",
+      "Built operating mechanisms and executive-ready narratives to align stakeholders and unblock decisions",
+      "Developed multi-year roadmaps aligning platform investments with business objectives",
+      "Improved delivery predictability through clear ownership, milestones, and review cadences",
+      "Enabled data-driven decision-making through metrics, reporting, and planning inputs",
     ],
   },
   {
@@ -38,14 +38,14 @@ const experiences = [
     location: "San Francisco, CA",
     current: false,
     description:
-      "Directed comprehensive cybersecurity portfolio encompassing threat intelligence, incident response, and security operations for one of the largest financial services firms.",
+      "Directed a cybersecurity portfolio spanning threat intelligence, incident response, and security operations in a regulated environment.",
     achievements: [
-      "Managed portfolio of 20+ cybersecurity programs with combined budget exceeding $50M",
-      "Led threat intelligence and incident response initiatives protecting $7T+ in client assets",
-      "Established security operations center (SOC) modernization program improving detection capabilities",
-      "Drove regulatory compliance programs ensuring adherence to SEC, FINRA, and state requirements",
-      "Built and mentored team of 25+ security professionals across multiple disciplines",
-      "Implemented zero-trust architecture initiatives across enterprise infrastructure",
+      "Managed a portfolio of 20+ cybersecurity programs with $50M+ combined budget",
+      "Led threat intelligence and incident response initiatives supporting protection of client assets",
+      "Drove regulatory and audit readiness programs across security and technology stakeholders",
+      "Built mechanisms for portfolio visibility, prioritization, and executive reporting",
+      "Mentored and led multi-disciplinary teams across security program areas",
+      "Advanced enterprise security architecture initiatives with measurable risk reduction outcomes",
     ],
   },
   {
@@ -55,49 +55,18 @@ const experiences = [
     location: "Costa Mesa, CA",
     current: false,
     description:
-      "Directed cybersecurity PMO during a critical period of security transformation and data breach remediation, establishing enterprise-wide security frameworks.",
+      "Directed cybersecurity PMO during a period of security transformation and breach remediation, establishing enterprise governance mechanisms.",
     achievements: [
-      "Led data breach remediation program ensuring comprehensive security improvements",
-      "Established enterprise cybersecurity PMO with standardized governance and delivery frameworks",
-      "Managed portfolio of security initiatives across identity protection, threat management, and compliance",
-      "Drove security transformation reducing incident response time by 60%",
-      "Implemented security metrics and reporting frameworks for executive leadership",
-      "Coordinated with legal, communications, and regulatory teams on incident response",
-    ],
-  },
-  {
-    company: "Bank of America",
-    role: "Director, Technology Program Management",
-    period: "2012 - 2015",
-    location: "Charlotte, NC",
-    current: false,
-    description:
-      "Directed technology program management for enterprise infrastructure and security initiatives supporting global banking operations.",
-    achievements: [
-      "Managed $30M+ portfolio of technology infrastructure programs",
-      "Led enterprise identity and access management modernization initiative",
-      "Drove cloud adoption strategy and implementation programs",
-      "Established program management standards adopted across technology organization",
-      "Coordinated cross-functional delivery across 10+ technology teams",
-    ],
-  },
-  {
-    company: "Deloitte Consulting",
-    role: "Senior Consultant, Technology Strategy",
-    period: "2009 - 2012",
-    location: "Los Angeles, CA",
-    current: false,
-    description:
-      "Delivered technology strategy and program management consulting services to Fortune 500 clients across financial services and technology sectors.",
-    achievements: [
-      "Led technology transformation engagements for financial services clients",
-      "Developed program management methodologies adopted firm-wide",
-      "Managed client relationships and delivery teams of 15+ consultants",
-      "Drove business development resulting in $5M+ in new engagements",
-      "Specialized in security and risk management advisory services",
+      "Led breach remediation efforts and coordinated cross-functional execution across security, legal, and communications",
+      "Established governance and delivery mechanisms to standardize execution across security initiatives",
+      "Built executive reporting and metrics to drive prioritization and accountability",
+      "Improved incident response effectiveness through operational mechanisms and process modernization",
+      "Coordinated compliance and regulatory workstreams to support audit readiness",
+      "Drove enterprise security transformation initiatives across identity, threat, and risk programs",
     ],
   },
 ];
+
 
 export default function ExperiencePage() {
   return (
