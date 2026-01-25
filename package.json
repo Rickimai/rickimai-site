@@ -9,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^11.5.4",
+    "lucide-react": "^0.441.0",
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "lucide-react": "^0.441.0",
-    "framer-motion": "^11.5.4"
+    "resend": "^6.8.0"
   },
   "devDependencies": {
     "@types/node": "^20.16.5",

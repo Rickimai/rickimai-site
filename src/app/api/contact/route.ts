@@ -1,52 +1,39 @@
+import { Resend } from "resend";
 import { NextResponse } from "next/server";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const { name, email, subject, message } = body;
+    const { name, email, subject, message } = await req.json();
 
     if (!name || !email || !subject || !message) {
-      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      );
     }
 
-    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-    if (!SENDGRID_API_KEY) {
-      return NextResponse.json({ error: "Missing SendGrid API key" }, { status: 500 });
-    }
+    const to = process.env.CONTACT_TO_EMAIL || "rick@rickimai.com";
+    const from =
+      process.env.CONTACT_FROM_EMAIL || "Rick Imai <contact@rickimai.com>";
 
-    const payload = {
-      personalizations: [
-        {
-          to: [{ email: "rick.imai@gmail.com" }],
-          subject: subject,
-        },
-      ],
-      from: { email: "no-reply@rickimai.com", name: "rickimai.com" },
-      reply_to: { email },
-      content: [
-        {
-          type: "text/plain",
-          value: `Name: ${name}\nEmail: ${email}\n\n${message}`,
-        },
-      ],
-    };
-
-    const res = await fetch("https://api.sendgrid.com/v3/mail/send", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${SENDGRID_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
+    const { data, error } = await resend.emails.send({
+      from,
+      to,
+      reply_to: email,
+      subject: `[rickimai.com] ${subject}`,
+      text: `Subject: ${subject}\nName: ${name}\nEmail: ${email}\n\n${message}`,
     });
 
-    if (!res.ok) {
-      const text = await res.text();
-      return NextResponse.json({ error: text }, { status: res.status });
+    if (error) {
+      console.error("Resend error:", error);
+      return NextResponse.json({ error: "Failed to send" }, { status: 500 });
     }
 
-    return NextResponse.json({ ok: true }, { status: 200 });
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message || String(err) }, { status: 500 });
+    return NextResponse.json({ success: true, id: data?.id });
+  } catch (err) {
+    console.error("Contact form exception:", err);
+    return NextResponse.json({ error: "Failed to send" }, { status: 500 });
   }
 }
