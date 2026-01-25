@@ -50,12 +50,12 @@ export default function Home() {
         </section>
 
 
-        {/* What I'm Looking For */}
+        {/* What I&apos;m Looking For */}
         <section>
-          <h2 className="text-2xl font-semibold mb-4">What I'm Looking For</h2>
+          <h2 className="text-2xl font-semibold mb-4">What I&apos;m Looking For</h2>
           <div className="text-neutral-700 max-w-3xl">
             <p>
-              I'm exploring Staff TPM and Director TPM opportunities in:
+              I&apos;m exploring Staff TPM and Director TPM opportunities in:
             </p>
             <ul className="mt-3 list-disc pl-5 space-y-2">
               <li>Infrastructure governance & FinOps optimization</li>

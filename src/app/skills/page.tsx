@@ -189,8 +189,8 @@ export default function SkillsPage() {
               Expertise & Capabilities
             </div>
             <h1 className="heading-1 mt-6 text-neutral-900">Skills</h1>
-            <p className="mt-6 text-lg text-neutral-600">
-              The capabilities I’m trusted with — spanning data platforms, security, cost governance, and
+              <p className="mt-6 text-lg text-neutral-600">
+              The capabilities I&apos;m trusted with — spanning data platforms, security, cost governance, and
               executive program leadership.
             </p>
           </div>

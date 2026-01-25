@@ -111,7 +111,7 @@ export default function AboutPage() {
           <div className="mt-6 space-y-4 text-neutral-700">
             <p>
               I&apos;m a Senior Technical Program Manager focused on security data platforms and
-              cost governance. Most recently at Amazon Web Services, I’ve led platform-scale
+              cost governance. Most recently at Amazon Web Services, I&apos;ve led platform-scale
               programs with ~$80M annual budget oversight—driving predictable delivery,
               operational rigor, and measurable efficiency gains across high-stakes security
               workloads.

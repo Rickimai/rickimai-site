@@ -129,7 +129,7 @@ export default function ResumePage() {
             </div>
 
             <p className="mt-6 text-sm text-neutral-500">
-              If you’re not sure which view to use, start with <span className="font-medium text-neutral-700">Full Profile (General)</span>.
+              If you&apos;re not sure which view to use, start with <span className="font-medium text-neutral-700">Full Profile (General)</span>.
             </p>
           </div>
         </div>

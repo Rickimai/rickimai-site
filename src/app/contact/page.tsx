@@ -106,7 +106,7 @@ export default function ContactPage() {
                 </p>
 
                 <div className="mt-6 rounded-lg border border-neutral-200 bg-neutral-50 p-4">
-                  <h3 className="font-semibold text-neutral-900">I'm currently exploring Staff TPM and Director-level opportunities.</h3>
+                  <h3 className="font-semibold text-neutral-900">I&apos;m currently exploring Staff TPM and Director-level opportunities.</h3>
                   <div className="mt-3 text-sm text-neutral-700 space-y-1">
                     <div>📧 Email: rick.imai@gmail.com</div>
                     <div>💼 LinkedIn: linkedin.com/in/rickimai</div>
@@ -233,7 +233,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         className="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
-                        placeholder="What's this about?"
+                        placeholder="What&apos;s this about?"
                       />
                     </div>
 
@@ -311,7 +311,9 @@ export default function ContactPage() {
               {[
                 {
                   q: "Are you open to new opportunities?",
-                  a: "I'm always interested in hearing about interesting opportunities, particularly in senior technical program management, security leadership, or executive roles at innovative companies.",
+                  a: <>
+                    I&apos;m always interested in hearing about interesting opportunities, particularly in senior technical program management, security leadership, or executive roles at innovative companies.
+                  </>,
                 },
                 {
                   q: "Do you do consulting or advisory work?",
@@ -322,7 +324,7 @@ export default function ContactPage() {
                   a: "I enjoy sharing knowledge at conferences and events on topics including cybersecurity program management, technical leadership, and enterprise security transformation.",
                 },
                 {
-                  q: "What's the best way to reach you?",
+                  q: <>What&apos;s the best way to reach you?</>,
                   a: "For professional inquiries, LinkedIn is the best channel. For everything else, the contact form above or email works great.",
                 },
               ].map((faq, index) => (
