@@ -83,7 +83,7 @@ export default function AboutPage() {
         <div className="lg:col-span-2">
           <div className="aspect-square overflow-hidden rounded-2xl border border-neutral-300 bg-neutral-50 shadow-sm">
             <Image
-              src="/images/rick-imai.jpg"
+              src="/images/rick-imai-01.png"
               alt="Rick Imai"
               width={600}
               height={600}
