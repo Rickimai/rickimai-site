@@ -114,7 +114,7 @@ export default function AboutPage() {
                   </p>
 
                   <p>
-                    My lane is the intersection of security, data platforms, and business outcomes: turning ambiguous problems into crisp plans, aligning exec stakeholders, and shipping durable mechanisms (metrics, operating rhythms, automation) that make the system run better month after month.
+                    My work sits at the intersection of security, data platforms, and business outcomes. I specialize in turning ambiguous problems into clear execution plans, aligning executive stakeholders, and building durable mechanisms—metrics, operating rhythms, and automation—that enable systems to scale sustainably while maintaining cost discipline.
                   </p>
 
                   <p>
