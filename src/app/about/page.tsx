@@ -47,7 +47,7 @@ const interests = [
   { icon: Coffee, label: "Coffee Enthusiast" },
   { icon: Music, label: "Hip-Hop & Reggae" },
   { icon: BookOpen, label: "Leadership, Technology and Personal DevelopmentBooks" },
-  { icon: Dog, Label: "My English Bulldog"}
+  { icon: Dog, Label: "My English Bulldog"},
 ];
 
 export default function AboutPage() {
