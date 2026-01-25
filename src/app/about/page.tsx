@@ -48,7 +48,7 @@ const interests = [
   { icon: Heart, label: "My Family" },
   { icon: CookingPot, label: "Cooking" },
   { icon: Coffee, label: "Coffee Enthusiast" },
-  { icon: Music, label: "Hip-Hop & Reggae" },
+  { icon: Music, label: "Hip-Hop, Reggae, Hard Rock, Punk, Jazz" },
   { icon: BookOpen, label: "Leadership, Tech and Personal Development Books" },
   { icon: Dog, label: "My English Bulldog" },
   { icon: Fish, label: "Fishing" },
