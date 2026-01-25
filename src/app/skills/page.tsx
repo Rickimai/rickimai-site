@@ -25,7 +25,7 @@ const signatureStrengths = [
   {
     title: "FinOps & Cost Governance",
     description:
-      "Showback/chargeback models, cost attribution across shared platforms, forecasting, and cost-as-a-design-input tradeoffs.",
+      "Showback and chargeback models, cost attribution across shared platforms, forecasting, and treating cost as a first-class design constraint.",
     icon: BarChart3,
   },
   {
@@ -41,16 +41,16 @@ const signatureStrengths = [
     icon: Shield,
   },
   {
-    title: "Executive Communication",
-    description:
-      "Decision-ready narratives for senior leaders: crisp options, tradeoffs, and clear asks tied to measurable outcomes.",
-    icon: Target,
-  },
-  {
     title: "Cross-Org Program Leadership",
     description:
       "Alignment across product, engineering, finance, and ops — especially when ownership, funding, or priorities are unclear.",
     icon: Workflow,
+  },
+  {
+    title: "Executive Communication",
+    description:
+      "Decision-ready narratives for senior leaders: crisp options, tradeoffs, and clear asks tied to measurable outcomes.",
+    icon: Target,
   },
   {
     title: "Operational Excellence",
@@ -59,6 +59,7 @@ const signatureStrengths = [
     icon: Sparkles,
   },
 ];
+
 
 const capabilityBuckets = [
   {
@@ -159,7 +160,7 @@ const tools = [
 
 export default function SkillsPage() {
   return (
-    <>
+    <main className="min-h-screen" aria-label="Skills page">
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-40">
         <div className="container-custom">
@@ -170,8 +171,8 @@ export default function SkillsPage() {
             </div>
             <h1 className="heading-1 mt-6 text-white">Skills</h1>
             <p className="mt-6 text-lg text-neutral-400">
-              The capabilities I’m known for — spanning data platforms, security,
-              cost governance, and executive program leadership.
+              The capabilities I’m trusted with — spanning data platforms, security, cost governance, and
+              executive program leadership.
             </p>
           </div>
         </div>
@@ -186,11 +187,14 @@ export default function SkillsPage() {
               Practical strengths built through delivery — focused on outcomes,
               tradeoffs, and mechanisms that scale.
             </p>
+            <p className="mt-3 text-sm text-neutral-500">
+              Delivered and operated platforms supporting PB-scale data, multi-million-dollar budgets, and executive decision-making.
+            </p>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Signature strengths">
             {signatureStrengths.map((item) => (
-              <div key={item.title} className="card">
+              <div key={item.title} role="listitem" className="card">
                 <div className="mb-4 inline-flex rounded-lg bg-primary-900/30 p-2 text-primary-400">
                   <item.icon className="h-5 w-5" />
                 </div>
@@ -225,9 +229,9 @@ export default function SkillsPage() {
                   <h3 className="heading-3 text-white">{bucket.title}</h3>
                 </div>
 
-                <ul className="space-y-3">
+                <ul className="space-y-3" aria-label={bucket.title + " capabilities"}>
                   {bucket.items.map((item) => (
-                    <li key={item} className="flex gap-3 text-sm">
+                    <li key={item} className="flex gap-3 text-sm" role="listitem">
                       <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-400" />
                       <span className="text-neutral-300">{item}</span>
                     </li>
@@ -250,9 +254,9 @@ export default function SkillsPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" role="list" aria-label="Certifications">
             {certifications.map((cert) => (
-              <div key={cert.name} className="card text-center">
+              <div key={cert.name} role="listitem" className="card text-center">
                 <div className="mx-auto mb-4 inline-flex rounded-lg bg-primary-900/30 p-3 text-primary-400">
                   <cert.icon className="h-6 w-6" />
                 </div>
@@ -277,10 +281,11 @@ export default function SkillsPage() {
                 </div>
                 <h2 className="heading-3 text-white">Operating Models</h2>
               </div>
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-6 flex flex-wrap gap-2" role="list" aria-label="Operating models">
                 {methodologies.map((method) => (
                   <span
                     key={method}
+                    role="listitem"
                     className="rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-2 text-sm text-neutral-300"
                   >
                     {method}
@@ -299,14 +304,15 @@ export default function SkillsPage() {
               </div>
               <div className="mt-6 space-y-4">
                 {tools.map((toolGroup) => (
-                  <div key={toolGroup.category}>
-                    <h4 className="mb-2 text-sm font-medium text-neutral-400">
+                    <div key={toolGroup.category}>
+                    <h4 id={`tools-${toolGroup.category.replace(/\s+/g, '-')}`} className="mb-2 text-sm font-medium text-neutral-400">
                       {toolGroup.category}
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2" role="list" aria-labelledby={`tools-${toolGroup.category.replace(/\s+/g, '-')}`}>
                       {toolGroup.items.map((tool) => (
                         <span
                           key={tool}
+                          role="listitem"
                           className="rounded-md bg-neutral-800/50 px-3 py-1 text-sm text-neutral-300"
                         >
                           {tool}
@@ -332,7 +338,7 @@ export default function SkillsPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Leadership competencies">
             {[
               {
                 icon: Users,
@@ -371,7 +377,7 @@ export default function SkillsPage() {
                   "Structured evaluation, contract clarity, and ongoing performance management.",
               },
             ].map((competency) => (
-              <div key={competency.title} className="card">
+              <div key={competency.title} role="listitem" className="card">
                 <div className="mb-4 inline-flex rounded-lg bg-primary-900/30 p-2 text-primary-400">
                   <competency.icon className="h-5 w-5" />
                 </div>
