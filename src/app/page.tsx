@@ -10,7 +10,7 @@ export default function Home() {
           </h1>
 
           <p className="text-xl text-neutral-600">
-            Staff Technical Program Manager
+            Staff Technical Program Manager | Director, Technical Program Management
           </p>
 
           <p className="text-lg text-neutral-700 max-w-2xl">
