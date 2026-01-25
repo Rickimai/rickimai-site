@@ -106,44 +106,19 @@ export default function AboutPage() {
 
                 <div className="mt-6 space-y-4 text-neutral-400">
                   <p>
-                    I&apos;m a Senior Technical Program Manager at Amazon Web
-                    Services, where I lead security data platforms with
-                    significant budget oversight. With over 15 years of
-                    experience in technical program management, I&apos;ve had
-                    the privilege of working with some of the most innovative
-                    companies in technology and financial services.
+                    I&apos;m a Senior Technical Program Manager focused on security data platforms and cost governance. Most recently at Amazon Web Services, I’ve led platform-scale programs with ~$80M annual budget oversight—driving predictable delivery, operational rigor, and measurable efficiency gains across high-stakes security workloads.
                   </p>
 
                   <p>
-                    My journey in technology began with a fascination for how
-                    systems work together to solve complex problems. This
-                    curiosity evolved into a career focused on building and
-                    leading programs that protect critical infrastructure and
-                    enable business growth.
+                    Before AWS, I ran the cybersecurity portfolio at Charles Schwab as a Managing Director, coordinating 20+ programs and protecting trillions of dollars in client assets. Earlier, I built and led a cybersecurity PMO at Experian during a major security transformation, including breach remediation and enterprise governance.
                   </p>
 
                   <p>
-                    At Charles Schwab, I served as Managing Director overseeing
-                    the cybersecurity portfolio, protecting trillions in client
-                    assets. Before that, at Experian, I directed the
-                    cybersecurity PMO during a critical period of security
-                    transformation, leading breach remediation efforts and
-                    establishing enterprise-wide security frameworks.
+                    My lane is the intersection of security, data platforms, and business outcomes: turning ambiguous problems into crisp plans, aligning exec stakeholders, and shipping durable mechanisms (metrics, operating rhythms, automation) that make the system run better month after month.
                   </p>
 
                   <p>
-                    What drives me is the intersection of technology and
-                    business value. I believe the best technical programs are
-                    those that not only solve complex problems but also create
-                    measurable impact for organizations and the people they
-                    serve.
-                  </p>
-
-                  <p>
-                    When I&apos;m not working on program strategies or security
-                    architectures, you can find me exploring the Pacific
-                    Northwest trails, enjoying a good cup of coffee, or diving
-                    into the latest leadership and technology books.
+                    Outside of work, I&apos;m usually with my wife and two daughters, hanging out with my English Bulldog, experimenting with BBQ, or building homelab projects and automations.
                   </p>
                 </div>
               </div>
