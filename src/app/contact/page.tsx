@@ -316,7 +316,7 @@ export default function ContactPage() {
                   q: "What's the best way to reach you?",
                   a: "For professional inquiries, LinkedIn is the best channel. For everything else, the contact form above or email works great.",
                 },
-                .map((faq, index) => (
+              ].map((faq, index) => (
                 <div key={index} className="card">
                   <h3 className="font-semibold text-neutral-900">{faq.q}</h3>
                   <p className="mt-2 text-neutral-600">{faq.a}</p>

@@ -390,6 +390,6 @@ export default function SkillsPage() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
