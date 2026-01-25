@@ -11,6 +11,7 @@ import {
   Music,
   BookOpen,
   ArrowRight,
+  Fish,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -46,8 +47,9 @@ const interests = [
   { icon: CookingPot, label: "Cooking" },
   { icon: Coffee, label: "Coffee Enthusiast" },
   { icon: Music, label: "Hip-Hop & Reggae" },
-  { icon: BookOpen, label: "Leadership, Technology and Personal DevelopmentBooks" },
-  { icon: Dog, Label: "My English Bulldog"},
+  { icon: BookOpen, label: "Leadership, Tech and Personal Development Books" },
+  { icon: Dog, label: "My English Bulldog" },
+  { icon: Fish, label: "Fishing" },
 ];
 
 export default function AboutPage() {
