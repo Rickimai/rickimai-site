@@ -13,6 +13,7 @@ import {
   ArrowRight,
   Fish,
 } from "lucide-react";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About | Rick Imai",
@@ -73,64 +74,76 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Bio Section */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="mx-auto max-w-4xl">
-            <div className="grid gap-12 lg:grid-cols-5">
-              {/* Photo placeholder */}
-              <div className="lg:col-span-2">
-                <div className="aspect-square overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50">
-                  <div className="flex h-full items-center justify-center">
-                    <div className="text-center">
-                      <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-neutral-100">
-                        <User className="h-12 w-12 text-primary-600" />
-                      </div>
-                      <p className="text-sm text-neutral-500">
-                        Photo placeholder
-                      </p>
-                    </div>
-                  </div>
-                </div>
+{/* Bio Section */}
+<section className="section-padding">
+  <div className="container-custom">
+    <div className="mx-auto max-w-4xl">
+      <div className="grid gap-12 lg:grid-cols-5">
+        {/* Photo + quick facts */}
+        <div className="lg:col-span-2">
+          <div className="aspect-square overflow-hidden rounded-2xl border border-neutral-300 bg-neutral-50 shadow-sm">
+            <Image
+              src="/images/rick-imai.jpg"
+              alt="Rick Imai"
+              width={600}
+              height={600}
+              className="h-full w-full object-cover"
+              priority
+            />
+          </div>
 
-                <div className="mt-6 space-y-3">
-                  <div className="flex items-center gap-3 text-neutral-400">
-                    <MapPin className="h-5 w-5 text-primary-500" />
-                    <span>Irvine, CA</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-neutral-400">
-                    <Briefcase className="h-5 w-5 text-primary-500" />
-                    <span>AWS - Senior TPM</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bio content */}
-              <div className="lg:col-span-3">
-                <h2 className="heading-2 text-neutral-900">Hello, I&apos;m Rick</h2>
-
-                <div className="mt-6 space-y-4 text-neutral-400">
-                  <p>
-                    I&apos;m a Senior Technical Program Manager focused on security data platforms and cost governance. Most recently at Amazon Web Services, I’ve led platform-scale programs with ~$80M annual budget oversight—driving predictable delivery, operational rigor, and measurable efficiency gains across high-stakes security workloads.
-                  </p>
-
-                  <p>
-                    Before AWS, I ran the cybersecurity portfolio at Charles Schwab as a Managing Director, coordinating 20+ programs and protecting trillions of dollars in client assets. Earlier, I built and led a cybersecurity PMO at Experian during a major security transformation, including breach remediation and enterprise governance.
-                  </p>
-
-                  <p>
-                    My work sits at the intersection of security, data platforms, and business outcomes. I specialize in turning ambiguous problems into clear execution plans, aligning executive stakeholders, and building durable mechanisms—metrics, operating rhythms, and automation—that enable systems to scale sustainably while maintaining cost discipline.
-                  </p>
-
-                  <p>
-                    Outside of work, I&apos;m usually with my wife and two daughters, hanging out with my English Bulldog, experimenting with BBQ, or building homelab projects and automations.
-                  </p>
-                </div>
-              </div>
+          <div className="mt-6 space-y-3">
+            <div className="flex items-center gap-3 text-neutral-600">
+              <MapPin className="h-5 w-5 text-primary-500" />
+              <span>Irvine, CA</span>
+            </div>
+            <div className="flex items-center gap-3 text-neutral-600">
+              <Briefcase className="h-5 w-5 text-primary-500" />
+              <span>AWS — Senior TPM</span>
             </div>
           </div>
         </div>
-      </section>
+
+        {/* Bio content */}
+        <div className="lg:col-span-3">
+          <h2 className="heading-2 text-neutral-900">Hello, I&apos;m Rick</h2>
+
+          <div className="mt-6 space-y-4 text-neutral-700">
+            <p>
+              I&apos;m a Senior Technical Program Manager focused on security data platforms and
+              cost governance. Most recently at Amazon Web Services, I’ve led platform-scale
+              programs with ~$80M annual budget oversight—driving predictable delivery,
+              operational rigor, and measurable efficiency gains across high-stakes security
+              workloads.
+            </p>
+
+            <p>
+              Before AWS, I ran the cybersecurity portfolio at Charles Schwab as a Managing
+              Director, coordinating 20+ programs and protecting trillions of dollars in client
+              assets. Earlier, I built and led a cybersecurity PMO at Experian during a major
+              security transformation, including breach remediation and enterprise governance.
+            </p>
+
+            <p>
+              My work sits at the intersection of security, data platforms, and business outcomes.
+              I specialize in turning ambiguous problems into clear execution plans, aligning
+              executive stakeholders, and building durable mechanisms—metrics, operating rhythms,
+              and automation—that enable systems to scale sustainably while maintaining cost
+              discipline.
+            </p>
+
+            <p>
+              Outside of work, I&apos;m usually with my wife and two daughters, hanging out with my
+              English Bulldog, experimenting with BBQ, or building homelab projects and
+              automations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Values Section */}
       <section className="section-padding border-t border-neutral-200">
