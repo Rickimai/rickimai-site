@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "rick@rickimai.com",
-    href: "mailto:rick@rickimai.com",
+    value: "rick.imai@gmail.com",
+    href: "mailto:rick.imai@gmail.com",
   },
   {
     icon: Linkedin,
@@ -34,7 +34,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Seattle, WA",
+    value: "Irvine, CA",
     href: null,
   },
 ];
