@@ -53,14 +53,26 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    // In production, this would send to an API endpoint
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
 
-    // For demo purposes, always show success
-    setStatus("success");
-    setIsSubmitting(false);
-    setFormState({ name: "", email: "", subject: "", message: "" });
+      if (!res.ok) {
+        setStatus("error");
+        setIsSubmitting(false);
+        return;
+      }
+
+      setStatus("success");
+      setFormState({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
