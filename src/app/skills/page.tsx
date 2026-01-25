@@ -108,55 +108,74 @@ const certifications = [
   {
     name: "PMP",
     fullName: "Project Management Professional",
-    issuer: "PMI",
+    issuer: "Project Management Institute (PMI)",
     icon: Target,
   },
   {
-    name: "CISSP",
-    fullName: "Certified Information Systems Security Professional",
-    issuer: "ISC²",
-    icon: Lock,
+    name: "CSM",
+    fullName: "Certified ScrumMaster",
+    issuer: "Scrum Alliance",
+    icon: Workflow,
   },
   {
-    name: "AWS SAA",
-    fullName: "AWS Solutions Architect Associate",
+    name: "ITIL",
+    fullName: "ITIL Foundation",
+    issuer: "AXELOS",
+    icon: Layers,
+  },
+  {
+    name: "AWS CCP",
+    fullName: "AWS Certified Cloud Practitioner (CLF-C02)",
     issuer: "Amazon Web Services",
     icon: Cloud,
   },
-  {
-    name: "CISM",
-    fullName: "Certified Information Security Manager",
-    issuer: "ISACA",
-    icon: Shield,
-  },
+];
+const methodologies = [
+  "Mechanism-driven execution (WBR/MBR, ops reviews, decision logs)",
+  "Ownership models (RACI, single-threaded ownership, escalation paths)",
+  "SLO/SLA operating model (availability, latency, cost-per-unit)",
+  "FinOps lifecycle (showback → forecast → controls → optimization)",
+  "Risk management (threat modeling, controls, audit readiness)",
+  "Incident mechanisms (on-call, SEV cadence, postmortems, prevention)",
+  "Program planning (roadmaps, dependency management, critical path)",
+  "Metrics & instrumentation (leading indicators, KPIs, guardrails)",
 ];
 
-const methodologies = [
-  "Agile/Scrum",
-  "SAFe",
-  "Kanban",
-  "Lean",
-  "ITIL",
-  "TOGAF",
-  "Waterfall",
-  "Six Sigma",
-];
 
 const tools = [
   {
-    category: "Program & Delivery",
-    items: ["Jira", "Confluence", "MS Project", "Smartsheet", "Asana"],
-  },
-  { category: "Collaboration", items: ["Slack", "Teams", "Zoom", "Miro"] },
-  {
-    category: "Platform & Engineering",
-    items: ["AWS", "Docker", "Terraform", "GitHub", "Jenkins"],
+    category: "Data & Query Platforms",
+    items: ["S3", "Athena", "Trino/Presto", "Glue Data Catalog", "Lake Formation"],
   },
   {
-    category: "Analytics & Observability",
-    items: ["SQL", "Tableau", "QuickSight", "Datadog", "Grafana", "Splunk"],
+    category: "Governance & Cost Controls",
+    items: [
+      "Showback / chargeback",
+      "Forecasting & variance reviews",
+      "Unit economics (cost per TB scanned / query minute)",
+      "Retention policy modeling",
+      "Lifecycle automation",
+      "Budget guardrails & approval paths",
+    ],
+  },
+  {
+    category: "Observability & Operations",
+    items: ["CloudWatch", "Datadog", "Grafana", "Splunk", "Alerting / on-call mechanisms"],
+  },
+  {
+    category: "Program Delivery",
+    items: ["Jira", "Confluence", "Executive narratives (WBR/MBR)", "Roadmaps", "Decision logs"],
+  },
+  {
+    category: "Engineering Workflow",
+    items: ["GitHub", "CI/CD", "Docker", "Infrastructure as Code (Terraform)"],
+  },
+  {
+    category: "Analytics & Reporting",
+    items: ["SQL", "Tableau", "QuickSight", "Dashboards & automated reporting"],
   },
 ];
+
 
 export default function SkillsPage() {
   return (
@@ -170,7 +189,7 @@ export default function SkillsPage() {
               Expertise & Capabilities
             </div>
             <h1 className="heading-1 mt-6 text-neutral-900">Skills</h1>
-            <p className="mt-6 text-lg text-neutral-400">
+            <p className="mt-6 text-lg text-neutral-600">
               The capabilities I’m trusted with — spanning data platforms, security, cost governance, and
               executive program leadership.
             </p>
@@ -183,7 +202,7 @@ export default function SkillsPage() {
         <div className="container-custom">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="heading-2 text-neutral-900">Signature Strengths</h2>
-            <p className="mt-4 text-neutral-400">
+            <p className="mt-4 text-neutral-600">
               Practical strengths built through delivery — focused on outcomes,
               tradeoffs, and mechanisms that scale.
             </p>
@@ -332,7 +351,7 @@ export default function SkillsPage() {
         <div className="container-custom">
             <div className="mx-auto max-w-2xl text-center">
             <h2 className="heading-2 text-neutral-900">Leadership</h2>
-            <p className="mt-4 text-neutral-400">
+            <p className="mt-4 text-neutral-600">
               How I operate when the problem is ambiguous, cross-org, and high
               stakes.
             </p>
