@@ -24,9 +24,6 @@ export default function Home() {
           </p>
 
           <div className="flex gap-4 pt-4">
-            <a href="/work" className="px-5 py-2 rounded-md bg-black text-white">
-              View Work
-            </a>
             <a href="/resumes/Rick_Imai_Resume_Infrastructure_Governance_FinOps.pdf" className="px-5 py-2 rounded-md border">
               Resume
             </a>
