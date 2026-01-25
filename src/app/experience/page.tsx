@@ -169,32 +169,26 @@ export default function ExperiencePage() {
       {/* Education Section */}
       <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
-          <h2 className="heading-2 text-center text-neutral-900">Education</h2>
+          <h2 className="heading-2 text-center text-neutral-900">
+            Education
+          </h2>
 
-          <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
-            <div className="card">
+          <div className="mx-auto mt-12 max-w-md">
+            <div className="card text-center">
               <div className="mb-4 inline-flex rounded-lg bg-neutral-100 p-3 text-primary-600">
                 <Building2 className="h-6 w-6" />
               </div>
-              <h3 className="heading-3 text-neutral-900">MBA, Technology Management</h3>
-              <p className="mt-1 text-neutral-700">University of California, Irvine</p>
-              <p className="mt-2 text-sm text-neutral-500">
-                Concentration in Information Technology and Strategy
-              </p>
-            </div>
 
-            <div className="card">
-              <div className="mb-4 inline-flex rounded-lg bg-neutral-100 p-3 text-primary-600">
-                <Building2 className="h-6 w-6" />
-              </div>
               <h3 className="heading-3 text-neutral-900">
-                BS, Computer Science
+                BA, Social Sciences
               </h3>
+
               <p className="mt-1 text-neutral-700">
-                University of California, Los Angeles
+                University of California, Irvine
               </p>
+
               <p className="mt-2 text-sm text-neutral-500">
-                Minor in Business Economics
+                Concentration in Information Technology and Business Economics
               </p>
             </div>
           </div>
