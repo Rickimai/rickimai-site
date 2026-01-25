@@ -165,11 +165,11 @@ export default function SkillsPage() {
       <section className="pt-32 pb-16 lg:pt-40">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary-900/30 px-4 py-1.5 text-sm font-medium text-primary-400">
+            <div className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-1.5 text-sm font-medium text-primary-600">
               <Layers className="h-4 w-4" />
               Expertise & Capabilities
             </div>
-            <h1 className="heading-1 mt-6 text-white">Skills</h1>
+            <h1 className="heading-1 mt-6 text-neutral-900">Skills</h1>
             <p className="mt-6 text-lg text-neutral-400">
               The capabilities I’m trusted with — spanning data platforms, security, cost governance, and
               executive program leadership.
@@ -182,7 +182,7 @@ export default function SkillsPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="heading-2 text-white">Signature Strengths</h2>
+            <h2 className="heading-2 text-neutral-900">Signature Strengths</h2>
             <p className="mt-4 text-neutral-400">
               Practical strengths built through delivery — focused on outcomes,
               tradeoffs, and mechanisms that scale.
@@ -195,10 +195,10 @@ export default function SkillsPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Signature strengths">
             {signatureStrengths.map((item) => (
               <div key={item.title} role="listitem" className="card">
-                <div className="mb-4 inline-flex rounded-lg bg-primary-900/30 p-2 text-primary-400">
+                <div className="mb-4 inline-flex rounded-lg bg-neutral-100 p-2 text-primary-600">
                   <item.icon className="h-5 w-5" />
                 </div>
-                <h3 className="font-semibold text-white">{item.title}</h3>
+                <h3 className="font-semibold text-neutral-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-neutral-400">
                   {item.description}
                 </p>
@@ -209,10 +209,10 @@ export default function SkillsPage() {
       </section>
 
       {/* Capability Buckets */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="heading-2 text-white">Capability Areas</h2>
+            <h2 className="heading-2 text-neutral-900">Capability Areas</h2>
             <p className="mt-4 text-neutral-400">
               A structured view of domains where I can step in as an owner and
               drive delivery.
@@ -223,17 +223,17 @@ export default function SkillsPage() {
             {capabilityBuckets.map((bucket) => (
               <div key={bucket.title} className="card">
                 <div className="mb-6 flex items-center gap-3">
-                  <div className="rounded-lg bg-primary-900/30 p-2 text-primary-400">
-                    <bucket.icon className="h-5 w-5" />
+                    <div className="rounded-lg bg-neutral-100 p-2 text-primary-600">
+                      <bucket.icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="heading-3 text-neutral-900">{bucket.title}</h3>
                   </div>
-                  <h3 className="heading-3 text-white">{bucket.title}</h3>
-                </div>
 
                 <ul className="space-y-3" aria-label={bucket.title + " capabilities"}>
                   {bucket.items.map((item) => (
-                    <li key={item} className="flex gap-3 text-sm" role="listitem">
-                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-400" />
-                      <span className="text-neutral-300">{item}</span>
+                      <li key={item} className="flex gap-3 text-sm" role="listitem">
+                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" />
+                      <span className="text-neutral-700">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -244,10 +244,10 @@ export default function SkillsPage() {
       </section>
 
       {/* Certifications */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="heading-2 text-white">Certifications</h2>
+            <h2 className="heading-2 text-neutral-900">Certifications</h2>
             <p className="mt-4 text-neutral-400">
               Industry-recognized certifications supporting program leadership
               and security domains.
@@ -257,11 +257,11 @@ export default function SkillsPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" role="list" aria-label="Certifications">
             {certifications.map((cert) => (
               <div key={cert.name} role="listitem" className="card text-center">
-                <div className="mx-auto mb-4 inline-flex rounded-lg bg-primary-900/30 p-3 text-primary-400">
+                <div className="mx-auto mb-4 inline-flex rounded-lg bg-neutral-100 p-3 text-primary-600">
                   <cert.icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold text-white">{cert.name}</h3>
-                <p className="mt-1 text-sm text-neutral-300">{cert.fullName}</p>
+                <h3 className="text-xl font-bold text-neutral-900">{cert.name}</h3>
+                <p className="mt-1 text-sm text-neutral-700">{cert.fullName}</p>
                 <p className="mt-2 text-xs text-neutral-500">{cert.issuer}</p>
               </div>
             ))}
@@ -270,23 +270,23 @@ export default function SkillsPage() {
       </section>
 
       {/* Methodologies & Tools */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Methodologies */}
             <div>
               <div className="flex items-center gap-3">
-                <div className="rounded-lg bg-primary-900/30 p-2 text-primary-400">
+                <div className="rounded-lg bg-neutral-100 p-2 text-primary-600">
                   <GitBranch className="h-5 w-5" />
                 </div>
-                <h2 className="heading-3 text-white">Operating Models</h2>
+                <h2 className="heading-3 text-neutral-900">Operating Models</h2>
               </div>
               <div className="mt-6 flex flex-wrap gap-2" role="list" aria-label="Operating models">
                 {methodologies.map((method) => (
                   <span
                     key={method}
                     role="listitem"
-                    className="rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-2 text-sm text-neutral-300"
+                    className="rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-2 text-sm text-neutral-700"
                   >
                     {method}
                   </span>
@@ -297,15 +297,15 @@ export default function SkillsPage() {
             {/* Tools */}
             <div>
               <div className="flex items-center gap-3">
-                <div className="rounded-lg bg-primary-900/30 p-2 text-primary-400">
+                <div className="rounded-lg bg-neutral-100 p-2 text-primary-600">
                   <Server className="h-5 w-5" />
                 </div>
-                <h2 className="heading-3 text-white">Tools & Platforms</h2>
+                <h2 className="heading-3 text-neutral-900">Tools & Platforms</h2>
               </div>
               <div className="mt-6 space-y-4">
                 {tools.map((toolGroup) => (
                     <div key={toolGroup.category}>
-                    <h4 id={`tools-${toolGroup.category.replace(/\s+/g, '-')}`} className="mb-2 text-sm font-medium text-neutral-400">
+                    <h4 id={`tools-${toolGroup.category.replace(/\s+/g, '-')}`} className="mb-2 text-sm font-medium text-neutral-600">
                       {toolGroup.category}
                     </h4>
                     <div className="flex flex-wrap gap-2" role="list" aria-labelledby={`tools-${toolGroup.category.replace(/\s+/g, '-')}`}>
@@ -313,7 +313,7 @@ export default function SkillsPage() {
                         <span
                           key={tool}
                           role="listitem"
-                          className="rounded-md bg-neutral-800/50 px-3 py-1 text-sm text-neutral-300"
+                          className="rounded-md bg-neutral-50 px-3 py-1 text-sm text-neutral-700"
                         >
                           {tool}
                         </span>
@@ -328,10 +328,10 @@ export default function SkillsPage() {
       </section>
 
       {/* Leadership */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="heading-2 text-white">Leadership</h2>
+            <div className="mx-auto max-w-2xl text-center">
+            <h2 className="heading-2 text-neutral-900">Leadership</h2>
             <p className="mt-4 text-neutral-400">
               How I operate when the problem is ambiguous, cross-org, and high
               stakes.
@@ -378,10 +378,10 @@ export default function SkillsPage() {
               },
             ].map((competency) => (
               <div key={competency.title} role="listitem" className="card">
-                <div className="mb-4 inline-flex rounded-lg bg-primary-900/30 p-2 text-primary-400">
+                <div className="mb-4 inline-flex rounded-lg bg-neutral-100 p-2 text-primary-600">
                   <competency.icon className="h-5 w-5" />
                 </div>
-                <h3 className="font-semibold text-white">{competency.title}</h3>
+                <h3 className="font-semibold text-neutral-900">{competency.title}</h3>
                 <p className="mt-2 text-sm text-neutral-400">
                   {competency.description}
                 </p>

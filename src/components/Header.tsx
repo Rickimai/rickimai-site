@@ -18,12 +18,12 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-neutral-800/50 bg-neutral-950/80 backdrop-blur-md">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur-sm">
       <nav className="container-custom">
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="text-lg font-semibold tracking-tight text-white transition-colors hover:text-primary-400"
+            className="text-lg font-semibold tracking-tight text-neutral-900 transition-colors hover:text-primary-600"
           >
             Rick Imai
           </Link>
@@ -36,8 +36,8 @@ export function Header() {
                 href={item.href}
                 className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
                   pathname === item.href
-                    ? "bg-neutral-800 text-white"
-                    : "text-neutral-400 hover:bg-neutral-800/50 hover:text-white"
+                    ? "bg-neutral-100 text-neutral-900"
+                    : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
                 }`}
               >
                 {item.name}
@@ -51,7 +51,7 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="rounded-lg p-2 text-neutral-400 hover:bg-neutral-800 hover:text-white md:hidden"
+            className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -65,7 +65,7 @@ export function Header() {
 
         {/* Mobile navigation */}
         {mobileMenuOpen && (
-          <div className="border-t border-neutral-800 py-4 md:hidden">
+          <div className="border-t border-neutral-200 py-4 md:hidden">
             <div className="flex flex-col gap-1">
               {navigation.map((item) => (
                 <Link
@@ -74,8 +74,8 @@ export function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`rounded-lg px-4 py-3 text-sm font-medium transition-all ${
                     pathname === item.href
-                      ? "bg-neutral-800 text-white"
-                      : "text-neutral-400 hover:bg-neutral-800/50 hover:text-white"
+                      ? "bg-neutral-100 text-neutral-900"
+                      : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
                   }`}
                 >
                   {item.name}

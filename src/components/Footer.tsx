@@ -31,14 +31,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-neutral-800 bg-neutral-950">
+    <footer className="border-t border-neutral-200 bg-white">
       <div className="container-custom py-12">
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand */}
           <div>
             <Link
               href="/"
-              className="text-lg font-semibold text-white transition-colors hover:text-primary-400"
+              className="text-lg font-semibold text-neutral-900 transition-colors hover:text-primary-600"
             >
               Rick Imai
             </Link>
@@ -76,7 +76,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-lg bg-neutral-800 p-2 text-neutral-400 transition-all hover:bg-neutral-700 hover:text-primary-400"
+                  className="rounded-lg bg-neutral-50 p-2 text-neutral-700 transition-all hover:bg-neutral-100 hover:text-primary-600"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />
@@ -86,8 +86,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-neutral-800 pt-8 text-center">
-          <p className="text-sm text-neutral-500">
+        <div className="mt-12 border-t border-neutral-200 pt-8 text-center">
+          <p className="text-sm text-neutral-600">
             &copy; {currentYear} Rick Imai. All rights reserved.
           </p>
         </div>

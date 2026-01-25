@@ -26,12 +26,12 @@ export default function ResumePage() {
       <section className="pt-32 pb-16 lg:pt-40">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary-900/30 px-4 py-1.5 text-sm font-medium text-primary-400">
+            <div className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-1.5 text-sm font-medium text-primary-600">
               <FileText className="h-4 w-4" />
               Professional Resume
             </div>
-            <h1 className="heading-1 mt-6 text-white">Resume</h1>
-            <p className="mt-6 text-lg text-neutral-400">
+            <h1 className="heading-1 mt-6 text-neutral-900">Resume</h1>
+            <p className="mt-6 text-lg text-neutral-600">
               A summary of my professional experience, education, and
               certifications.
             </p>
@@ -53,22 +53,22 @@ export default function ResumePage() {
         </div>
       </section>
 
-      {/* Resume Content */}
-      <section className="section-padding">
+            {/* Resume Card */}
+            <section className="section-padding">
         <div className="container-custom">
           <div className="mx-auto max-w-4xl">
             {/* Resume Card */}
-            <div className="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-8 sm:p-10 lg:p-12">
+            <div className="rounded-2xl border border-neutral-200 bg-white p-8 sm:p-10 lg:p-12">
               {/* Header */}
               <div className="border-b border-neutral-800 pb-8">
-                <h2 className="text-3xl font-bold text-white sm:text-4xl">
+                <h2 className="text-3xl font-bold text-neutral-900 sm:text-4xl">
                   Rick Imai
                 </h2>
-                <p className="mt-2 text-xl text-primary-400">
+                <p className="mt-2 text-xl text-primary-600">
                   Senior Technical Program Manager
                 </p>
 
-                <div className="mt-6 flex flex-wrap gap-4 text-sm text-neutral-400">
+                <div className="mt-6 flex flex-wrap gap-4 text-sm text-neutral-600">
                   <span className="flex items-center gap-1.5">
                     <MapPin className="h-4 w-4" />
                     Seattle, WA
@@ -88,7 +88,7 @@ export default function ResumePage() {
                   </a>
                 </div>
 
-                <p className="mt-6 text-neutral-300">
+                <p className="mt-6 text-neutral-700">
                   Senior Technical Program Manager with 15+ years of experience
                   leading enterprise security, cybersecurity, and data platform
                   initiatives. Proven track record of managing $80M+ budgets,
@@ -100,10 +100,10 @@ export default function ResumePage() {
               {/* Experience */}
               <div className="mt-8">
                 <div className="mb-6 flex items-center gap-3">
-                  <div className="rounded-lg bg-primary-900/30 p-2 text-primary-400">
+                  <div className="rounded-lg bg-neutral-100 p-2 text-primary-600">
                     <Briefcase className="h-5 w-5" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-neutral-900">
                     Professional Experience
                   </h3>
                 </div>
@@ -113,10 +113,10 @@ export default function ResumePage() {
                   <div>
                     <div className="flex flex-wrap items-start justify-between gap-2">
                       <div>
-                        <h4 className="font-semibold text-white">
+                        <h4 className="font-semibold text-neutral-900">
                           Senior Technical Program Manager
                         </h4>
-                        <p className="text-primary-400">
+                        <p className="text-primary-600">
                           Amazon Web Services (AWS)
                         </p>
                       </div>
@@ -147,10 +147,10 @@ export default function ResumePage() {
                   <div>
                     <div className="flex flex-wrap items-start justify-between gap-2">
                       <div>
-                        <h4 className="font-semibold text-white">
+                        <h4 className="font-semibold text-neutral-900">
                           Managing Director, Cybersecurity Portfolio
                         </h4>
-                        <p className="text-primary-400">Charles Schwab</p>
+                        <p className="text-primary-600">Charles Schwab</p>
                       </div>
                       <span className="text-sm text-neutral-500">
                         2018 - 2022
@@ -178,10 +178,10 @@ export default function ResumePage() {
                   <div>
                     <div className="flex flex-wrap items-start justify-between gap-2">
                       <div>
-                        <h4 className="font-semibold text-white">
+                        <h4 className="font-semibold text-neutral-900">
                           Senior Director, Cybersecurity PMO
                         </h4>
-                        <p className="text-primary-400">Experian</p>
+                        <p className="text-primary-600">Experian</p>
                       </div>
                       <span className="text-sm text-neutral-500">
                         2015 - 2018
@@ -210,10 +210,10 @@ export default function ResumePage() {
                   <div>
                     <div className="flex flex-wrap items-start justify-between gap-2">
                       <div>
-                        <h4 className="font-semibold text-white">
+                        <h4 className="font-semibold text-neutral-900">
                           Director, Technology Program Management
                         </h4>
-                        <p className="text-primary-400">Bank of America</p>
+                        <p className="text-primary-600">Bank of America</p>
                       </div>
                       <span className="text-sm text-neutral-500">
                         2012 - 2015
@@ -237,10 +237,10 @@ export default function ResumePage() {
                   <div>
                     <div className="flex flex-wrap items-start justify-between gap-2">
                       <div>
-                        <h4 className="font-semibold text-white">
+                        <h4 className="font-semibold text-neutral-900">
                           Senior Consultant, Technology Strategy
                         </h4>
-                        <p className="text-primary-400">Deloitte Consulting</p>
+                        <p className="text-primary-600">Deloitte Consulting</p>
                       </div>
                       <span className="text-sm text-neutral-500">
                         2009 - 2012
@@ -262,20 +262,20 @@ export default function ResumePage() {
               </div>
 
               {/* Education */}
-              <div className="mt-10 border-t border-neutral-800 pt-8">
+              <div className="mt-10 border-t border-neutral-200 pt-8">
                 <div className="mb-6 flex items-center gap-3">
-                  <div className="rounded-lg bg-primary-900/30 p-2 text-primary-400">
+                  <div className="rounded-lg bg-neutral-100 p-2 text-primary-600">
                     <GraduationCap className="h-5 w-5" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Education</h3>
+                  <h3 className="text-xl font-semibold text-neutral-900">Education</h3>
                 </div>
 
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
-                    <h4 className="font-semibold text-white">
+                      <h4 className="font-semibold text-neutral-900">
                       MBA, Technology Management
                     </h4>
-                    <p className="text-primary-400">
+                    <p className="text-primary-600">
                       University of California, Irvine
                     </p>
                     <p className="mt-1 text-sm text-neutral-500">
@@ -283,10 +283,10 @@ export default function ResumePage() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">
+                      <h4 className="font-semibold text-neutral-900">
                       BS, Computer Science
                     </h4>
-                    <p className="text-primary-400">
+                    <p className="text-primary-600">
                       University of California, Los Angeles
                     </p>
                     <p className="mt-1 text-sm text-neutral-500">
@@ -297,12 +297,12 @@ export default function ResumePage() {
               </div>
 
               {/* Certifications */}
-              <div className="mt-10 border-t border-neutral-800 pt-8">
+              <div className="mt-10 border-t border-neutral-200 pt-8">
                 <div className="mb-6 flex items-center gap-3">
-                  <div className="rounded-lg bg-primary-900/30 p-2 text-primary-400">
+                  <div className="rounded-lg bg-neutral-100 p-2 text-primary-600">
                     <Award className="h-5 w-5" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-neutral-900">
                     Certifications
                   </h3>
                 </div>
@@ -316,7 +316,7 @@ export default function ResumePage() {
                   ].map((cert) => (
                     <span
                       key={cert}
-                      className="rounded-lg border border-neutral-700 bg-neutral-800/50 px-4 py-2 text-sm text-neutral-300"
+                      className="rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-2 text-sm text-neutral-700"
                     >
                       {cert}
                     </span>
@@ -325,8 +325,8 @@ export default function ResumePage() {
               </div>
 
               {/* Skills */}
-              <div className="mt-10 border-t border-neutral-800 pt-8">
-                <h3 className="mb-4 text-lg font-semibold text-white">
+              <div className="mt-10 border-t border-neutral-200 pt-8">
+                <h3 className="mb-4 text-lg font-semibold text-neutral-900">
                   Core Competencies
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -346,7 +346,7 @@ export default function ResumePage() {
                   ].map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-md bg-neutral-800 px-3 py-1 text-sm text-neutral-400"
+                      className="rounded-md bg-neutral-50 px-3 py-1 text-sm text-neutral-700"
                     >
                       {skill}
                     </span>

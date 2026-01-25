@@ -106,11 +106,11 @@ export default function ExperiencePage() {
       <section className="pt-32 pb-16 lg:pt-40">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary-900/30 px-4 py-1.5 text-sm font-medium text-primary-400">
+            <div className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-1.5 text-sm font-medium text-primary-600">
               <Briefcase className="h-4 w-4" />
               Professional Journey
             </div>
-            <h1 className="heading-1 mt-6 text-white">Experience</h1>
+            <h1 className="heading-1 mt-6 text-neutral-900">Experience</h1>
             <p className="mt-6 text-lg text-neutral-400">
               15+ years of progressive leadership in technical program
               management, cybersecurity, and enterprise transformation at
@@ -125,7 +125,7 @@ export default function ExperiencePage() {
         <div className="container-custom">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-0 top-0 hidden h-full w-px bg-neutral-800 md:left-1/2 md:block md:-translate-x-1/2" />
+            <div className="absolute left-0 top-0 hidden h-full w-px bg-neutral-200 md:left-1/2 md:block md:-translate-x-1/2" />
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
@@ -136,7 +136,7 @@ export default function ExperiencePage() {
                   }`}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-0 top-0 hidden h-4 w-4 rounded-full border-4 border-neutral-950 bg-primary-500 md:left-1/2 md:block md:-translate-x-1/2" />
+                  <div className="absolute left-0 top-0 hidden h-4 w-4 rounded-full border-4 border-neutral-100 bg-primary-500 md:left-1/2 md:block md:-translate-x-1/2" />
 
                   {/* Content */}
                   <div className="md:w-1/2 md:px-8">
@@ -144,16 +144,16 @@ export default function ExperiencePage() {
                       <div className="flex flex-wrap items-start justify-between gap-4">
                         <div>
                           <div className="flex items-center gap-3">
-                            <h3 className="heading-3 text-white">
+                            <h3 className="heading-3 text-neutral-900">
                               {exp.company}
                             </h3>
                             {exp.current && (
-                              <span className="rounded-full bg-primary-900/30 px-3 py-1 text-xs font-medium text-primary-400">
+                                <span className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-primary-600">
                                 Current
                               </span>
                             )}
                           </div>
-                          <p className="mt-1 font-medium text-neutral-300">
+                            <p className="mt-1 font-medium text-neutral-700">
                             {exp.role}
                           </p>
                         </div>
@@ -170,17 +170,17 @@ export default function ExperiencePage() {
                         </span>
                       </div>
 
-                      <p className="mt-4 text-neutral-400">{exp.description}</p>
+                      <p className="mt-4 text-neutral-600">{exp.description}</p>
 
                       <div className="mt-6">
-                        <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-300">
+                        <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-600">
                           Key Achievements
                         </h4>
                         <ul className="mt-3 space-y-2">
                           {exp.achievements.map((achievement, i) => (
                             <li
                               key={i}
-                              className="flex items-start gap-2 text-sm text-neutral-400"
+                              className="flex items-start gap-2 text-sm text-neutral-600"
                             >
                               <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-500" />
                               {achievement}
@@ -198,30 +198,30 @@ export default function ExperiencePage() {
       </section>
 
       {/* Education Section */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
-          <h2 className="heading-2 text-center text-white">Education</h2>
+          <h2 className="heading-2 text-center text-neutral-900">Education</h2>
 
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
             <div className="card">
-              <div className="mb-4 inline-flex rounded-lg bg-primary-900/30 p-3 text-primary-400">
+              <div className="mb-4 inline-flex rounded-lg bg-neutral-100 p-3 text-primary-600">
                 <Building2 className="h-6 w-6" />
               </div>
-              <h3 className="heading-3 text-white">MBA, Technology Management</h3>
-              <p className="mt-1 text-neutral-300">University of California, Irvine</p>
+              <h3 className="heading-3 text-neutral-900">MBA, Technology Management</h3>
+              <p className="mt-1 text-neutral-700">University of California, Irvine</p>
               <p className="mt-2 text-sm text-neutral-500">
                 Concentration in Information Technology and Strategy
               </p>
             </div>
 
             <div className="card">
-              <div className="mb-4 inline-flex rounded-lg bg-primary-900/30 p-3 text-primary-400">
+              <div className="mb-4 inline-flex rounded-lg bg-neutral-100 p-3 text-primary-600">
                 <Building2 className="h-6 w-6" />
               </div>
-              <h3 className="heading-3 text-white">
+              <h3 className="heading-3 text-neutral-900">
                 BS, Computer Science
               </h3>
-              <p className="mt-1 text-neutral-300">
+              <p className="mt-1 text-neutral-700">
                 University of California, Los Angeles
               </p>
               <p className="mt-2 text-sm text-neutral-500">

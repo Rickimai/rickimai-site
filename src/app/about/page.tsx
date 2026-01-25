@@ -55,11 +55,11 @@ export default function AboutPage() {
       <section className="pt-32 pb-16 lg:pt-40">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary-900/30 px-4 py-1.5 text-sm font-medium text-primary-400">
+            <div className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-1.5 text-sm font-medium text-primary-600">
               <User className="h-4 w-4" />
               Get to Know Me
             </div>
-            <h1 className="heading-1 mt-6 text-white">About</h1>
+            <h1 className="heading-1 mt-6 text-neutral-900">About</h1>
             <p className="mt-6 text-lg text-neutral-400">
               A passionate leader dedicated to building secure, scalable
               platforms that protect and empower organizations.
@@ -75,11 +75,11 @@ export default function AboutPage() {
             <div className="grid gap-12 lg:grid-cols-5">
               {/* Photo placeholder */}
               <div className="lg:col-span-2">
-                <div className="aspect-square overflow-hidden rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-800 to-neutral-900">
+                <div className="aspect-square overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50">
                   <div className="flex h-full items-center justify-center">
                     <div className="text-center">
-                      <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-primary-900/30">
-                        <User className="h-12 w-12 text-primary-400" />
+                      <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-neutral-100">
+                        <User className="h-12 w-12 text-primary-600" />
                       </div>
                       <p className="text-sm text-neutral-500">
                         Photo placeholder
@@ -102,7 +102,7 @@ export default function AboutPage() {
 
               {/* Bio content */}
               <div className="lg:col-span-3">
-                <h2 className="heading-2 text-white">Hello, I&apos;m Rick</h2>
+                <h2 className="heading-2 text-neutral-900">Hello, I&apos;m Rick</h2>
 
                 <div className="mt-6 space-y-4 text-neutral-400">
                   <p>
@@ -153,11 +153,11 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="heading-2 text-white">Core Values</h2>
-            <p className="mt-4 text-neutral-400">
+            <h2 className="heading-2 text-neutral-900">Core Values</h2>
+            <p className="mt-4 text-neutral-600">
               The principles that guide my work and leadership approach.
             </p>
           </div>
@@ -165,8 +165,8 @@ export default function AboutPage() {
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
             {values.map((value) => (
               <div key={value.title} className="card">
-                <h3 className="heading-3 text-white">{value.title}</h3>
-                <p className="mt-2 text-neutral-400">{value.description}</p>
+                <h3 className="heading-3 text-neutral-900">{value.title}</h3>
+                <p className="mt-2 text-neutral-600">{value.description}</p>
               </div>
             ))}
           </div>
@@ -174,11 +174,11 @@ export default function AboutPage() {
       </section>
 
       {/* Personal Interests */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="heading-2 text-white">Beyond Work</h2>
-            <p className="mt-4 text-neutral-400">
+            <h2 className="heading-2 text-neutral-900">Beyond Work</h2>
+            <p className="mt-4 text-neutral-600">
               A few things that keep me balanced and inspired outside of work.
             </p>
           </div>
@@ -187,10 +187,10 @@ export default function AboutPage() {
             {interests.map((interest) => (
               <div
                 key={interest.label}
-                className="flex items-center gap-3 rounded-lg border border-neutral-800 bg-neutral-900/50 px-5 py-3"
+                className="flex items-center gap-3 rounded-lg border border-neutral-200 bg-neutral-50 px-5 py-3"
               >
-                <interest.icon className="h-5 w-5 text-primary-400" />
-                <span className="text-neutral-300">{interest.label}</span>
+                <interest.icon className="h-5 w-5 text-primary-600" />
+                <span className="text-neutral-700">{interest.label}</span>
               </div>
             ))}
           </div>
@@ -198,16 +198,16 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl">
-            <div className="rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-900 to-neutral-900/50 p-8 sm:p-12">
-              <div className="mb-6 inline-flex rounded-lg bg-primary-900/30 p-3 text-primary-400">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-8 sm:p-12">
+              <div className="mb-6 inline-flex rounded-lg bg-neutral-100 p-3 text-primary-600">
                 <Heart className="h-6 w-6" />
               </div>
-              <h2 className="heading-2 text-white">My Leadership Philosophy</h2>
+              <h2 className="heading-2 text-neutral-900">My Leadership Philosophy</h2>
               <blockquote className="mt-6 border-l-2 border-primary-500 pl-6">
-                <p className="text-lg italic text-neutral-300">
+                <p className="text-lg italic text-neutral-600">
                   &quot;Great program management isn&apos;t about controlling
                   every detail—it&apos;s about creating clarity, removing
                   obstacles, and empowering teams to do their best work. The
@@ -215,7 +215,7 @@ export default function AboutPage() {
                   team felt ownership over the outcomes.&quot;
                 </p>
               </blockquote>
-              <p className="mt-6 text-neutral-400">
+              <p className="mt-6 text-neutral-600">
                 I approach every program with a focus on people first. Technical
                 challenges can always be solved, but building a culture of
                 trust, accountability, and continuous improvement is what
@@ -227,11 +227,11 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="heading-2 text-white">Let&apos;s Connect</h2>
-            <p className="mt-4 text-neutral-400">
+            <h2 className="heading-2 text-neutral-900">Let&apos;s Connect</h2>
+            <p className="mt-4 text-neutral-600">
               I&apos;m always interested in discussing new opportunities,
               sharing insights, or simply connecting with fellow professionals.
             </p>

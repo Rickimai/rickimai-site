@@ -78,11 +78,11 @@ export default function ContactPage() {
       <section className="pt-32 pb-16 lg:pt-40">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary-900/30 px-4 py-1.5 text-sm font-medium text-primary-400">
+            <div className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-1.5 text-sm font-medium text-primary-600">
               <MessageSquare className="h-4 w-4" />
               Let&apos;s Talk
             </div>
-            <h1 className="heading-1 mt-6 text-white">Contact</h1>
+            <h1 className="heading-1 mt-6 text-neutral-900">Contact</h1>
             <p className="mt-6 text-lg text-neutral-400">
               Interested in working together or just want to say hello? I&apos;d
               love to hear from you.
@@ -98,7 +98,7 @@ export default function ContactPage() {
             <div className="grid gap-12 lg:grid-cols-5">
               {/* Contact Info */}
               <div className="lg:col-span-2">
-                <h2 className="heading-3 text-white">Get in Touch</h2>
+                <h2 className="heading-3 text-neutral-900">Get in Touch</h2>
                 <p className="mt-4 text-neutral-400">
                   Whether you have a question, want to discuss an opportunity,
                   or just want to connect, feel free to reach out through any of
@@ -108,22 +108,22 @@ export default function ContactPage() {
                 <div className="mt-8 space-y-4">
                   {contactInfo.map((item) => (
                     <div key={item.label} className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-neutral-800 text-primary-400">
+                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-neutral-50 text-primary-600">
                         <item.icon className="h-5 w-5" />
                       </div>
                       <div>
-                        <p className="text-sm text-neutral-500">{item.label}</p>
+                        <p className="text-sm text-neutral-600">{item.label}</p>
                         {item.href ? (
                           <a
                             href={item.href}
                             target={item.href.startsWith("http") ? "_blank" : undefined}
                             rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                            className="text-neutral-200 transition-colors hover:text-primary-400"
+                            className="text-neutral-900 transition-colors hover:text-primary-600"
                           >
                             {item.value}
                           </a>
                         ) : (
-                          <p className="text-neutral-200">{item.value}</p>
+                          <p className="text-neutral-900">{item.value}</p>
                         )}
                       </div>
                     </div>
@@ -144,14 +144,14 @@ export default function ContactPage() {
               {/* Contact Form */}
               <div className="lg:col-span-3">
                 <div className="card">
-                  <h2 className="heading-3 text-white">Send a Message</h2>
-                  <p className="mt-2 text-sm text-neutral-400">
+                  <h2 className="heading-3 text-neutral-900">Send a Message</h2>
+                  <p className="mt-2 text-sm text-neutral-600">
                     Fill out the form below and I&apos;ll get back to you as
                     soon as possible.
                   </p>
 
                   {status === "success" && (
-                    <div className="mt-6 flex items-center gap-3 rounded-lg border border-green-800 bg-green-900/20 p-4 text-green-400">
+                    <div className="mt-6 flex items-center gap-3 rounded-lg border border-green-600 bg-green-50 p-4 text-green-700">
                       <CheckCircle className="h-5 w-5 flex-shrink-0" />
                       <p className="text-sm">
                         Thanks for your message! I&apos;ll be in touch soon.
@@ -160,7 +160,7 @@ export default function ContactPage() {
                   )}
 
                   {status === "error" && (
-                    <div className="mt-6 flex items-center gap-3 rounded-lg border border-red-800 bg-red-900/20 p-4 text-red-400">
+                    <div className="mt-6 flex items-center gap-3 rounded-lg border border-red-600 bg-red-50 p-4 text-red-700">
                       <AlertCircle className="h-5 w-5 flex-shrink-0" />
                       <p className="text-sm">
                         Something went wrong. Please try again or reach out
@@ -174,7 +174,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="name"
-                          className="mb-2 block text-sm font-medium text-neutral-300"
+                          className="mb-2 block text-sm font-medium text-neutral-600"
                         >
                           Name
                         </label>
@@ -185,14 +185,14 @@ export default function ContactPage() {
                           value={formState.name}
                           onChange={handleChange}
                           required
-                          className="w-full rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-3 text-white placeholder-neutral-500 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+                          className="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
                           placeholder="Your name"
                         />
                       </div>
                       <div>
                         <label
                           htmlFor="email"
-                          className="mb-2 block text-sm font-medium text-neutral-300"
+                          className="mb-2 block text-sm font-medium text-neutral-600"
                         >
                           Email
                         </label>
@@ -203,7 +203,7 @@ export default function ContactPage() {
                           value={formState.email}
                           onChange={handleChange}
                           required
-                          className="w-full rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-3 text-white placeholder-neutral-500 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+                          className="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
                           placeholder="you@example.com"
                         />
                       </div>
@@ -212,7 +212,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="subject"
-                        className="mb-2 block text-sm font-medium text-neutral-300"
+                        className="mb-2 block text-sm font-medium text-neutral-600"
                       >
                         Subject
                       </label>
@@ -223,7 +223,7 @@ export default function ContactPage() {
                         value={formState.subject}
                         onChange={handleChange}
                         required
-                        className="w-full rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-3 text-white placeholder-neutral-500 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+                        className="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
                         placeholder="What's this about?"
                       />
                     </div>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="message"
-                        className="mb-2 block text-sm font-medium text-neutral-300"
+                        className="mb-2 block text-sm font-medium text-neutral-600"
                       >
                         Message
                       </label>
@@ -242,7 +242,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         rows={5}
-                        className="w-full resize-none rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-3 text-white placeholder-neutral-500 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+                        className="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
                         placeholder="Your message..."
                       />
                     </div>
@@ -291,10 +291,10 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="section-padding border-t border-neutral-800">
+      <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl">
-            <h2 className="heading-2 text-center text-white">
+            <h2 className="heading-2 text-center text-neutral-900">
               Frequently Asked Questions
             </h2>
 
@@ -316,10 +316,10 @@ export default function ContactPage() {
                   q: "What's the best way to reach you?",
                   a: "For professional inquiries, LinkedIn is the best channel. For everything else, the contact form above or email works great.",
                 },
-              ].map((faq, index) => (
+                .map((faq, index) => (
                 <div key={index} className="card">
-                  <h3 className="font-semibold text-white">{faq.q}</h3>
-                  <p className="mt-2 text-neutral-400">{faq.a}</p>
+                  <h3 className="font-semibold text-neutral-900">{faq.q}</h3>
+                  <p className="mt-2 text-neutral-600">{faq.a}</p>
                 </div>
               ))}
             </div>
