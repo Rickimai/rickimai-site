@@ -40,7 +40,7 @@ const values = [
   {
     title: "Impact",
     description:
-      "Focusing on meaningful results that create lasting value for organizations and teams.",
+      "Short-term results over long-term perfection.",
   },
 ];
 
