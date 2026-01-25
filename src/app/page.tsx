@@ -72,52 +72,96 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Impact */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-6">Impact</h2>
-
-          <ul className="space-y-3 text-neutral-700 font-mono text-sm">
-            <li>• Reduced detection latency from 144 minutes → 30 seconds</li>
-            <li>• Delivered $10M+ annual storage savings through retention strategy</li>
-            <li>• Governed $50M+ AWS fleets across ingestion, compute, and storage</li>
-            <li>• Deleted 600+ PB of unused data through lifecycle automation</li>
-            <li>• Scaled platforms supporting billions of daily events</li>
-          </ul>
-        </section>
+        
 
 
         {/* Work */}
         <section>
-          <h2 className="text-2xl font-semibold mb-8">Selected Work</h2>
+          <h2 className="text-2xl font-semibold mb-2">Selected Work & Impact</h2>
+          <p className="text-sm text-neutral-500 mb-6">Representative programs across security, finance, and infrastructure, each paired with measurable outcomes.</p>
 
           <div className="grid gap-6">
-            <div className="border rounded-lg p-6 space-y-2">
-              <h3 className="font-semibold">Basin Data Lake — FinOps & Retention</h3>
-              <p className="text-neutral-600">
-                Led cost governance and lifecycle strategy for an exabyte-scale security telemetry
-                platform. Built showback, forecasting, and retention controls that bent the cost curve
-                while improving query performance. Partnered with engineering, finance, and security
-                leadership to establish unit-economics tracking and automated cost controls across
-                distributed systems.
-              </p>
+            <div className="rounded-lg border p-6 hover:shadow-sm transition-shadow">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                <div className="sm:max-w-[72%]">
+                  <h3 className="text-lg font-semibold">Basin Data Lake — FinOps &amp; Retention</h3>
+                  <p className="mt-2 text-neutral-600">
+                    Led cost governance and lifecycle strategy for an exabyte-scale security telemetry platform. Built showback, forecasting, and retention controls that bent the cost curve while improving query performance. Partnered with engineering, finance, and security leadership to establish unit-economics tracking and automated controls across distributed systems.
+                  </p>
+                </div>
+
+                <div className="shrink-0 sm:w-64 text-left sm:text-right">
+                  <div className="text-3xl font-semibold tracking-tight text-primary-600 transition-transform transition-colors duration-200 hover:scale-[1.03] hover:text-primary-500">$10M+ / yr</div>
+                  <div className="mt-2 text-sm text-neutral-500">Cost savings</div>
+                </div>
+              </div>
             </div>
 
-            <div className="border rounded-lg p-6 space-y-2">
-              <h3 className="font-semibold">IOC Detection Platform</h3>
-              <p className="text-neutral-600">
-                Reduced investigation time from hours to seconds by redesigning data pipelines
-                and query patterns, enabling near-real-time detection. Consolidated 24 redundant
-                queries into a single automated workflow, reducing operational overhead and
-                improving detection coverage.
-              </p>
+            <div className="rounded-lg border p-6 hover:shadow-sm transition-shadow">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                <div className="sm:max-w-[72%]">
+                  <h3 className="text-lg font-semibold">IOC Detection Platform</h3>
+                  <p className="mt-2 text-neutral-600">
+                    Reduced investigation time from hours to seconds by redesigning data pipelines
+                    and query patterns, enabling near-real-time detection. Consolidated 24 redundant
+                    queries into a single automated workflow, reducing operational overhead and
+                    improving detection coverage.
+                  </p>
+                </div>
+
+                <div className="shrink-0 sm:w-64 text-left sm:text-right">
+                  <div className="text-3xl font-semibold tracking-tight text-primary-600 transition-transform transition-colors duration-200 hover:scale-[1.03] hover:text-primary-500">144m → 30s</div>
+                  <div className="mt-2 text-sm text-neutral-500">Detection latency</div>
+                </div>
+              </div>
             </div>
 
-            <div className="border rounded-lg p-6 space-y-2">
-              <h3 className="font-semibold">Experian Security Modernization</h3>
-              <p className="text-neutral-600">
-                Led post-breach transformation across detection, governance, and metrics with
-                clear ownership and measurable maturity improvements.
-              </p>
+            <div className="rounded-lg border p-6 hover:shadow-sm transition-shadow">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                <div className="sm:max-w-[72%]">
+                  <h3 className="text-lg font-semibold">FinTech Forecasting &amp; LLM-Driven Analytics</h3>
+                  <p className="mt-2 text-neutral-600">
+                    Built predictive analytics and automation for finance teams by integrating ML-driven KPI forecasting into planning and analysis workflows. Partnered with Finance and Engineering to replace manual analysis with automated, executive-ready outputs.
+                  </p>
+                </div>
+
+                <div className="shrink-0 sm:w-64 text-left sm:text-right">
+                  <div className="text-3xl font-semibold tracking-tight text-primary-600 transition-transform transition-colors duration-200 hover:scale-[1.03] hover:text-primary-500">3 weeks → 15 min</div>
+                  <div className="mt-2 text-sm text-neutral-500">Financial analysis cycle</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-lg border p-6 hover:shadow-sm transition-shadow">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                <div className="sm:max-w-[72%]">
+                  <h3 className="text-lg font-semibold">AB P&amp;L Automation (MEC Acceleration)</h3>
+                  <p className="mt-2 text-neutral-600">
+                    Led end-to-end automation of Amazon Business P&L generation, replacing manual and semi-automated workflows with a scalable data pipeline. Improved data quality, reduced operational risk, and enabled faster executive reporting through standardized processing and controls.
+                  </p>
+                </div>
+
+                <div className="shrink-0 sm:w-64 text-left sm:text-right">
+                  <div className="text-3xl font-semibold tracking-tight text-primary-600 transition-transform transition-colors duration-200 hover:scale-[1.03] hover:text-primary-500">12 days → 7 days</div>
+                  <div className="mt-2 text-sm text-neutral-500">Monthly close timeline</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-lg border p-6 hover:shadow-sm transition-shadow">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                <div className="sm:max-w-[72%]">
+                  <h3 className="text-lg font-semibold">Experian Security Modernization</h3>
+                  <p className="mt-2 text-neutral-600">
+                    Led post-breach transformation across detection, governance, and metrics with clear ownership and measurable maturity improvements.
+                  </p>
+                </div>
+
+                <div className="shrink-0 sm:w-64 text-left sm:text-right">
+                  <div className="text-3xl font-semibold tracking-tight text-primary-600 transition-transform transition-colors duration-200 hover:scale-[1.03] hover:text-primary-500">+0.76</div>
+                  <div className="mt-2 text-sm text-neutral-500">Delivery maturity improvement (CMMI)</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

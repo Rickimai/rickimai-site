@@ -114,7 +114,9 @@ export default function AboutPage() {
               cost governance. Most recently at Amazon Web Services, I&apos;ve led platform-scale
               programs with ~$80M annual budget oversight—driving predictable delivery,
               operational rigor, and measurable efficiency gains across high-stakes security
-              workloads.
+              workloads. I also led cross-functional FinTech programs for Amazon Stores, delivering
+              automation, governance, and executive-ready reporting across large-scale data and
+              planning platforms.
             </p>
 
             <p>

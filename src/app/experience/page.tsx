@@ -10,14 +10,14 @@ import {
 export const metadata: Metadata = {
   title: "Experience | Rick Imai",
   description:
-    "Professional experience spanning 15+ years in technical program management at AWS, Charles Schwab, and Experian.",
+    "Professional experience spanning 20+ years in technical program management at AWS, Amazon Stores FinTech, Charles Schwab, and Experian.",
 };
 
 const experiences = [
   {
     company: "Amazon Web Services (AWS)",
     role: "Senior Technical Program Manager",
-    period: "2021 - Present",
+    period: "2024 - Present",
     location: "San Diego, CA",
     current: true,
     description:
@@ -29,6 +29,23 @@ const experiences = [
       "Developed multi-year roadmaps aligning platform investments with business objectives",
       "Improved delivery predictability through clear ownership, milestones, and review cadences",
       "Enabled data-driven decision-making through metrics, reporting, and planning inputs",
+    ],
+  },
+  {
+    company: "Amazon Stores (FinTech)",
+    role: "Senior Technical Program Manager",
+    period: "2021 - 2024",
+    location: "Irvine, CA",
+    current: false,
+    description:
+      "Led cross-functional FinTech programs supporting large-scale data, planning, and reporting platforms, partnering with Finance, Engineering, and Product to deliver automation, governance, and executive-ready mechanisms.",
+    achievements: [
+      "Led cross-functional program delivery for a 200+ engineer organization across data engineering, ML, finance, and product teams",
+      "Authored a 3-year organizational strategy influencing VP-level roadmap and investment decisions through data-driven planning",
+      "Delivered platform automation improving end-to-end efficiency by 99% (3 weeks → 10 minutes)",
+      "Owned annual budgeting and planning cycles, aligning funding, headcount, and initiative prioritization with Finance and Engineering leadership",
+      "Established operational excellence frameworks across 150+ production systems, achieving 90% automation coverage and sustained YoY improvement",
+      "Built executive reporting, metrics, and governance mechanisms to improve delivery predictability and decision velocity",
     ],
   },
   {
