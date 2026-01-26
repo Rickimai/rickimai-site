@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/rickimai",
-    href: "https://linkedin.com/in/rickimai",
+    value: "linkedin.com/in/rick-imai",
+    href: "https://linkedin.com/in/rick-imai",
   },
   {
     icon: Github,
@@ -122,7 +122,7 @@ export default function ContactPage() {
                   <h3 className="font-semibold text-neutral-900">I&apos;m currently exploring Staff TPM and Director-level opportunities.</h3>
                   <div className="mt-3 text-sm text-neutral-700 space-y-1">
                     <div>📧 Email: rick.imai@gmail.com</div>
-                    <div>💼 LinkedIn: linkedin.com/in/rickimai</div>
+                    <div>💼 LinkedIn: linkedin.com/in/rick-imai</div>
                     <div>📍 Location: Irvine, CA (open to remote)</div>
                   </div>
                 </div>
