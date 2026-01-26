@@ -20,7 +20,7 @@ export default function Home() {
                 Download Resume (PDF)
               </a>
               <a
-                href="https://linkedin.com/in/rickimai"
+                href="https://linkedin.com/in/rick-imai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2 rounded-md border"
