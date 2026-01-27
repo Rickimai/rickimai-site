@@ -51,19 +51,19 @@ export default function Home() {
             {[
               {
                 title: "Senior TPM Leadership",
-                desc: "15+ years leading on-prem and cloud platforms across security, data, and infrastructure",
+                desc: "20+ years leading security, data, and infrastructure across enterprise environments",
               },
               {
                 title: "Cross-Org Program Ownership",
-                desc: "End-to-end ownership of complex initiatives with multi-year roadmaps and exec visibility",
+                desc: "End-to-end ownership of complex initiatives with multi-year roadmaps and executive visibility",
               },
               {
                 title: "Platform Modernization",
-                desc: "Legacy-to-cloud transformations spanning architecture, migration, and governance",
+                desc: "Legacy-to-cloud transformations across architecture, migration, and governance",
               },
               {
-                title: "Executive Translation",
-                desc: "Trusted connector between engineering, security, finance, and business teams",
+                title: "Cybersecurity & Risk Programs",
+                desc: "Breach remediation, security data platforms, and regulated delivery across threat, identity, and protection domains"
               },
               {
                 title: "Platform Scaling & Governance",
