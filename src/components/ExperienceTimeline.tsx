@@ -19,17 +19,12 @@ export default function ExperienceTimeline({
 }: {
   experiences: Experience[];
 }) {
-  // runtime inspection to confirm shape and badges
-  // eslint-disable-next-line no-console
-  console.log("ExperienceTimeline received experiences:", experiences);
   const DEFAULT_VISIBLE = 3;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <div className="space-y-12">
       {experiences.map((exp, index) => {
-        // eslint-disable-next-line no-console
-        console.log(`Experience[${index}] badges:`, exp.badges);
         const achievements: string[] = Array.isArray(exp.achievements)
           ? exp.achievements
           : [];
