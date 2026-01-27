@@ -38,4 +38,4 @@ next-env.d.ts
 .env.production
 deploy.sh
 deploy-prod.sh
-
+deploy.sh.bak
