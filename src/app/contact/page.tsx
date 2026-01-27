@@ -93,7 +93,7 @@ export default function ContactPage() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-1.5 text-sm font-medium text-primary-600">
               <MessageSquare className="h-4 w-4" />
-              Let&apos;s Talk
+              Let&apos;s Connect
             </div>
             <h1 className="heading-1 mt-6 text-neutral-900">Contact</h1>
             <p className="mt-6 text-lg text-neutral-400">
