@@ -25,7 +25,7 @@ const nextConfig = {
             value: "strict-origin-when-cross-origin",
           },
           {
-            key: "Content-Security-Policy-Report-Only",
+            key: "Content-Security-Policy",
             value:
               "default-src 'self'; " +
               "base-uri 'self'; " +
