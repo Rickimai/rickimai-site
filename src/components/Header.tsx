@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/" },
+  { name: "Programs", href: "/programs" },
   { name: "Experience", href: "/experience" },
   { name: "Skills", href: "/skills" },
   { name: "About", href: "/about" },
@@ -36,17 +37,20 @@ export function Header() {
 
           {/* Desktop navigation */}
           <div className="hidden items-center gap-1 md:flex">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`${baseLink} ${
-                  pathname === item.href ? activeLink : inactiveLink
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const isActive =
+                item.href === "/" ? pathname === item.href : pathname.startsWith(item.href || "");
+
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`${baseLink} ${isActive ? activeLink : inactiveLink}`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
 
             {/* Keep Resume as primary CTA */}
             <Link href="/resume" className="btn-primary ml-4 px-4 py-2 text-sm">
@@ -69,18 +73,23 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="border-t border-neutral-800 py-4 md:hidden">
             <div className="flex flex-col gap-1">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
-                    pathname === item.href ? activeLink : inactiveLink
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const isActive =
+                  item.href === "/" ? pathname === item.href : pathname.startsWith(item.href || "");
+
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                      isActive ? activeLink : inactiveLink
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
 
               <Link
                 href="/resume"
