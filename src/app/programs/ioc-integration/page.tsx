@@ -69,6 +69,33 @@ function LinkCard({
   );
 }
 
+function SectionCard({
+  icon: Icon,
+  title,
+  text,
+  children,
+}: {
+  icon: any;
+  title: string;
+  text: string;
+  children?: React.ReactNode;
+}) {
+  return (
+    <div className="card p-8">
+      <div className="flex items-start gap-3">
+        <div className="rounded-lg border border-neutral-200 bg-neutral-100 p-2">
+          <Icon className="h-4 w-4 text-neutral-900" />
+        </div>
+        <div>
+          <h2 className="heading-2 text-neutral-900">{title}</h2>
+          <p className="mt-4 text-neutral-700 leading-relaxed">{text}</p>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const drivers = [
   {
     title: "Indicators ingested (per day)",
@@ -198,6 +225,40 @@ export default function IOCIntegrationCostModelPage() {
           </div>
         </div>
       </section>
+      {/* What is an IOC */}
+      <section className="py-14 border-t border-neutral-200 bg-white">
+        <div className="container-custom">
+            <SectionCard
+            icon={ShieldCheck}
+            title="What is an Indicator of Compromise (IOC)?"
+            text="An Indicator of Compromise (IOC) is a data point that signals potential malicious activity."
+            >
+            <p className="mt-4 text-sm text-neutral-700 leading-relaxed">
+                Common examples include IP addresses, domains, URLs, file hashes, or identities
+                associated with known threats. IOCs help security systems and analysts detect,
+                investigate, and respond to attacks.
+            </p>
+
+            <p className="mt-4 text-sm text-neutral-700 leading-relaxed">
+                On their own, IOCs are only effective if they are fresh, trustworthy, and
+                consistently applied. Stale or poorly governed indicators can create noise,
+                false positives, or missed detections.
+            </p>
+
+            <div className="mt-6 rounded-xl border border-neutral-200 bg-neutral-50 p-6">
+                <h3 className="text-sm font-semibold text-neutral-900">
+                Common IOC types
+                </h3>
+                <ul className="mt-3 grid gap-2 text-sm text-neutral-700 sm:grid-cols-2">
+                <li>• IP addresses and CIDR ranges</li>
+                <li>• Domains and URLs</li>
+                <li>• File hashes (e.g., SHA-256)</li>
+                <li>• Certificates or sender identities</li>
+                </ul>
+            </div>
+            </SectionCard>
+        </div>
+        </section>
 
       {/* Summary stats */}
       <section className="py-14 bg-white">

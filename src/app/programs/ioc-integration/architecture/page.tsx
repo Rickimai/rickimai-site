@@ -166,7 +166,7 @@ export default function IOCIntegrationArchitecturePage() {
 
           <SectionCard
             icon={ShieldCheck}
-            title="Freshness + provenance controls"
+            title="Freshness + controls"
             text="Freshness is enforced through metadata, not mutation. Every record carries timestamps, source identity, confidence, and TTL."
           >
             <ul className="mt-6 space-y-3 text-sm text-neutral-700">
