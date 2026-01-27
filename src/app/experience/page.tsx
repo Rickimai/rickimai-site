@@ -18,7 +18,7 @@ const experiences = [
     description:
       "Leading security data platforms and enterprise-wide initiatives with significant budget oversight and cross-functional program delivery.",
     achievements: [
-      "Led security data platforms with $80M annual budget oversight, ensuring efficient resource allocation and cost governance",
+      "Led security data platforms with $50M annual budget oversight, ensuring efficient resource allocation and cost governance",
       "Drove end-to-end program delivery for enterprise security initiatives spanning multiple organizations",
       "Built operating mechanisms and executive-ready narratives to align stakeholders and unblock decisions",
       "Developed multi-year roadmaps aligning platform investments with business objectives",
@@ -53,7 +53,7 @@ const experiences = [
       "Directed a cybersecurity portfolio spanning threat intelligence, incident response, and security operations in a regulated environment.",
     achievements: [
       "Managed a portfolio of 20+ cybersecurity programs with $50M+ combined budget",
-      "Led threat intelligence and incident response initiatives supporting protection of client assets",
+      "Led threat intelligence, incident response, IAM, data protection, and appsec initiatives supporting protection of client assets",
       "Drove regulatory and audit readiness programs across security and technology stakeholders",
       "Built mechanisms for portfolio visibility, prioritization, and executive reporting",
       "Mentored and led multi-disciplinary teams across security program areas",
@@ -61,13 +61,13 @@ const experiences = [
     ],
   },
   {
-    company: "Experian",
+    company: "Experian PLC",
     role: "Senior Director, Cybersecurity PMO",
     period: "2015 - 2019",
-    location: "Costa Mesa, CA",
+    location: "Allen, TX",
     current: false,
     description:
-      "Directed cybersecurity PMO during a period of security transformation and breach remediation, establishing enterprise governance mechanisms.",
+      "Directed cybersecurity PMO consisting of 20+ TPMs during a period of security transformation and breach remediation, establishing enterprise governance mechanisms.",
     achievements: [
       "Led breach remediation efforts and coordinated cross-functional execution across security, legal, and communications",
       "Established governance and delivery mechanisms to standardize execution across security initiatives",
@@ -75,6 +75,34 @@ const experiences = [
       "Improved incident response effectiveness through operational mechanisms and process modernization",
       "Coordinated compliance and regulatory workstreams to support audit readiness",
       "Drove enterprise security transformation initiatives across identity, threat, and risk programs",
+    ],
+  },
+  {
+    company: "Experian PLC",
+    role: "IT Director, Global Corporate Systems",
+    period: "2011 - 2014",
+    location: "Allen, TX",
+    current: false,
+    description:
+      "Led a small engineering team to build enterprise platforms for portfolio management, resource planning, and organizational coordination across a global IT organization. Implemented global standards to ensure consistent executive reporting.",
+    achievements: [
+      "Led a 6-person development team delivering portfolio and resource planning platforms",
+      "Implemented global reporting standards and templates for executive audiences",
+      "Improved cross-organizational coordination through shared platforms and governance",
+    ],
+  },
+  {
+    company: "Experian PLC",
+    role: "Sr. Manager, Head of IT PMO, North America",
+    period: "2007 - 2011",
+    location: "Costa Mesa, CA",
+    current: false,
+    description:
+      "Led the North America IT PMO managing delivery across infrastructure, security, and business systems. Established governance standards and improved portfolio visibility across global programs.",
+    achievements: [
+      "Managed a 20-person TPM organization delivering 75+ global programs annually",
+      "Established PMO governance standards and portfolio visibility mechanisms",
+      "Improved prioritization and executive reporting across multiple domains",
     ],
   },
 ];

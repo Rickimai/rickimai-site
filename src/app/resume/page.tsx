@@ -112,20 +112,41 @@ export default function ResumePage() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              {resumeArchetypes.map((r) => (
-                <div key={r.title} className="card bg-white">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h3 className="text-lg font-semibold text-neutral-900">{r.title}</h3>
-                      <p className="mt-2 text-sm text-neutral-600">{r.description}</p>
+              {resumeArchetypes.map((r) => {
+                const isRecommended = r.title === "Full Profile (General)";
+                return (
+                  <div
+                    key={r.title}
+                    className={`card bg-white ${
+                      isRecommended ? "ring-2 ring-primary-500 shadow-lg transform scale-100" : ""
+                    }`}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-lg font-semibold text-neutral-900">{r.title}</h3>
+                          {isRecommended && (
+                            <span className="rounded-full bg-primary-50 px-3 py-1 text-sm font-semibold text-primary-600">
+                              Recommended
+                            </span>
+                          )}
+                        </div>
+                        <p className="mt-2 text-sm text-neutral-600">{r.description}</p>
+                      </div>
+                      <a
+                        href={r.href}
+                        download
+                        className={`btn-primary shrink-0 ${
+                          isRecommended ? "bg-primary-600 hover:bg-primary-700 text-white" : ""
+                        }`}
+                      >
+                        <Download className="h-4 w-4" />
+                        Download
+                      </a>
                     </div>
-                    <a href={r.href} download className="btn-primary shrink-0">
-                      <Download className="h-4 w-4" />
-                      Download
-                    </a>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <p className="mt-6 text-sm text-neutral-500">
