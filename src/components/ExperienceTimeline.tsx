@@ -82,7 +82,7 @@ export default function ExperienceTimeline({
                       {exp.badges.map((badge: string, i: number) => (
                         <span
                           key={i}
-                          className="rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700"
+                          className="rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1 text-xs font-medium text-neutral-100 shadow-sm"
                         >
                           {badge}
                         </span>
