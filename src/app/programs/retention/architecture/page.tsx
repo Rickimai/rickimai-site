@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { CheckCircle2, ChevronDown } from "lucide-react";
+import Link from "next/link";
 import Breadcrumbs from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
@@ -144,6 +145,14 @@ export default function RetentionArchitecturePage() {
             publish cleanup events, run idempotent workers, then update metadata and storage with
             a complete audit trail.
           </p>
+          <div className="mt-8 flex justify-center gap-3">
+            <Link
+              href="/programs/retention/model"
+              className="inline-flex items-center justify-center rounded-xl border border-neutral-300 bg-white px-5 py-3 text-sm font-medium text-neutral-900 shadow-sm transition hover:shadow-md"
+            >
+              View Cost Model
+            </Link>
+          </div>
         </div>
       </section>
 

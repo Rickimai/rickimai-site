@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { CheckCircle2, Calculator, ChevronDown } from "lucide-react";
+import Link from "next/link";
 import Breadcrumbs from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
@@ -129,6 +130,14 @@ export default function RetentionCostModelPage() {
             Generic methodology to forecast storage volume and cost, then evaluate
             rolling retention options for a large dataset without double-counting growth.
           </p>
+          <div className="mt-8 flex justify-center gap-3">
+            <Link
+              href="/programs/retention/architecture"
+              className="inline-flex items-center justify-center rounded-xl bg-neutral-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-neutral-800"
+            >
+              View Architecture
+            </Link>
+          </div>
         </div>
       </section>
 
