@@ -1,23 +1,30 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, GitBranch, ShieldCheck, Wallet } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  GitBranch,
+  ShieldCheck,
+  Wallet,
+  Gauge,
+} from "lucide-react";
 import Breadcrumbs from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Data Retention Program | Rick Imai",
   description:
-    "Program overview for a generic data retention initiative: why it matters, outcomes, governance, and links to the architecture and cost model.",
+    "Program overview for a generic data retention initiative: why it matters, outcomes, guardrails, and links to the architecture and cost model.",
 };
 
 const outcomes = [
   {
     title: "Automated enforcement",
-    text: "Retention policies execute automatically with no manual cleanup or operational overhead.",
+    text: "Retention policies execute continuously with no manual cleanup or ticket-driven operations.",
     icon: CheckCircle2,
   },
   {
     title: "Lower storage footprint + spend",
-    text: "Continuously removes expired data to reduce storage footprint and bend the cost curve.",
+    text: "Deletes expired data to reduce storage footprint and bend the cost curve as volume grows.",
     icon: Wallet,
   },
   {
@@ -34,10 +41,10 @@ const outcomes = [
 
 const guardrails = [
   "Throttling/backpressure to protect downstream systems (catalog, object store, APIs)",
+  "Rate limits + concurrency caps per dataset/table/partition family",
   "Idempotent operations for safe retries and failure recovery",
   "DLQ + replay workflows for controlled reprocessing",
-  "Rate limits and concurrency caps per dataset / table / partition family",
-  "Audit logging and metrics to prove compliance and detect anomalies",
+  "Audit logging + metrics to prove compliance and detect anomalies",
 ];
 
 function Pill({ children }: { children: React.ReactNode }) {
@@ -80,7 +87,7 @@ function LinkCard({
   return (
     <Link
       href={href}
-      className="card group block p-6 transition hover:shadow-md"
+      className="card group block p-6 transition hover:shadow-md hover:-translate-y-0.5"
     >
       <div className="flex items-start justify-between gap-4">
         <div>
@@ -97,7 +104,7 @@ export default function RetentionProgramPage() {
   return (
     <>
       {/* Breadcrumbs */}
-      <section className="pt-24 pb-6">
+      <section className="pt-24 pb-4">
         <div className="container-custom">
           <Breadcrumbs
             items={[
@@ -109,7 +116,7 @@ export default function RetentionProgramPage() {
       </section>
 
       {/* Hero */}
-      <section className="pt-28 pb-16 border-b border-neutral-200 bg-neutral-50">
+      <section className="pb-14 border-b border-neutral-200 bg-neutral-50">
         <div className="container-custom max-w-4xl text-center">
           <div className="flex flex-wrap items-center justify-center gap-2">
             <Pill>Program</Pill>
@@ -118,12 +125,14 @@ export default function RetentionProgramPage() {
             <Pill>FinOps</Pill>
           </div>
 
-          <h1 className="heading-1 mt-6 text-neutral-900">Data Retention Program</h1>
+          <h1 className="heading-1 mt-6 text-neutral-900">
+            Data Retention Program
+          </h1>
 
           <p className="mt-5 text-lg text-neutral-600 leading-relaxed">
-            A program pattern for controlling storage growth by enforcing retention
-            policies at scale. Combines an event-driven retention service with a
-            forecasting model to quantify cost impact and guide policy decisions.
+            A reusable program pattern for controlling storage growth by enforcing
+            retention policies at scale—paired with a forecasting model to quantify
+            cost impact and guide policy decisions.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -137,63 +146,64 @@ export default function RetentionProgramPage() {
               href="/programs/retention/model"
               className="inline-flex items-center justify-center rounded-xl border border-neutral-300 bg-white px-5 py-3 text-sm font-medium text-neutral-900 shadow-sm transition hover:shadow-md"
             >
-              View Cost Model <ArrowRight className="ml-2 h-4 w-4 text-neutral-500" />
+              View Cost Model{" "}
+              <ArrowRight className="ml-2 h-4 w-4 text-neutral-500" />
             </Link>
           </div>
         </div>
       </section>
-    {/* Problem Statement */}
-    <section className="py-16 border-b border-neutral-200 bg-white">
-    <div className="container-custom max-w-5xl">
-        <div className="card p-10">
-        <h2 className="heading-2 text-neutral-900 text-center">
-            Problem
-        </h2>
 
-        <p className="mt-6 text-center text-lg text-neutral-600 leading-relaxed">
-            Without lifecycle management, data platforms accumulate historical data indefinitely.
-            Storage footprint grows every month, cloud costs compound, and manual cleanup becomes
-            reactive and unreliable.
-        </p>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-6">
-            <h3 className="text-sm font-semibold text-neutral-900">
-                No automated retention
-            </h3>
-            <p className="mt-3 text-sm text-neutral-600">
-                Data is rarely deleted consistently. Cleanup depends on ad-hoc scripts or tickets.
-            </p>
+      {/* Problem */}
+      <section className="py-16 border-b border-neutral-200 bg-white">
+        <div className="container-custom max-w-5xl">
+          <div className="card p-10 bg-gradient-to-b from-white to-neutral-50">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="heading-2 text-neutral-900">Problem</h2>
+              <p className="mt-6 text-lg text-neutral-600 leading-relaxed">
+                Without lifecycle management, data platforms accumulate historical
+                data indefinitely. Storage grows every month, cloud costs compound,
+                and cleanup becomes reactive and inconsistent.
+              </p>
             </div>
 
-            <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-6">
-            <h3 className="text-sm font-semibold text-neutral-900">
-                Storage + cost grow unchecked
-            </h3>
-            <p className="mt-3 text-sm text-neutral-600">
-                Data volume increases monthly, driving linear or exponential growth in storage and query spend.
-            </p>
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              <div className="rounded-xl border border-neutral-200 bg-white p-6">
+                <h3 className="text-sm font-semibold text-neutral-900">
+                  No automated retention
+                </h3>
+                <p className="mt-3 text-sm text-neutral-600">
+                  Deletion relies on ad-hoc scripts, tickets, or manual coordination.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-neutral-200 bg-white p-6">
+                <h3 className="text-sm font-semibold text-neutral-900">
+                  Storage + cost grow unchecked
+                </h3>
+                <p className="mt-3 text-sm text-neutral-600">
+                  Volume increases monthly, driving continued growth in storage and
+                  query spend.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-neutral-200 bg-white p-6">
+                <h3 className="text-sm font-semibold text-neutral-900">
+                  Operational + compliance risk
+                </h3>
+                <p className="mt-3 text-sm text-neutral-600">
+                  Inconsistent deletion creates audit gaps and increases governance
+                  exposure.
+                </p>
+              </div>
             </div>
 
-            <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-6">
-            <h3 className="text-sm font-semibold text-neutral-900">
-                Operational + compliance risk
-            </h3>
-            <p className="mt-3 text-sm text-neutral-600">
-                Inconsistent deletion creates audit gaps and increases exposure to governance and regulatory risk.
-            </p>
+            <div className="mt-10 rounded-xl border border-neutral-300 bg-neutral-900 p-6 text-center text-neutral-100">
+              <span className="font-medium">Result:</span> Growth outpaces budget.
+              Manual cleanup doesn’t scale. The model is not sustainable.
             </div>
+          </div>
         </div>
-
-        <div className="mt-10 rounded-xl border border-neutral-300 bg-neutral-900 p-6 text-center text-neutral-100">
-            <span className="font-medium">
-            Result:
-            </span>{" "}
-            Growth outpaces budget. Manual cleanup doesn’t scale. The model is not sustainable.
-        </div>
-        </div>
-    </div>
-    </section>
+      </section>
 
       {/* Summary */}
       <section className="py-14">
@@ -201,17 +211,17 @@ export default function RetentionProgramPage() {
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="lg:col-span-2 card p-8">
               <h2 className="heading-2 text-neutral-900">Program summary</h2>
+
               <p className="mt-4 text-neutral-700 leading-relaxed">
-                Data platforms naturally accumulate historical data, and without
-                enforced retention, storage footprint and spend trend upward over
-                time. This program pairs (1) a retention service that detects and
-                deletes expired partitions/files with (2) a forecasting model that
-                estimates future volume and cost under baseline vs retention scenarios.
+                This program pairs (1) a retention service that detects and deletes
+                expired partitions/files with (2) a forecasting model that estimates
+                future volume and cost under baseline vs retention scenarios.
               </p>
+
               <p className="mt-4 text-neutral-700 leading-relaxed">
-                The result is a repeatable approach to cost control and governance:
-                policies are enforced automatically, execution is safe and auditable,
-                and leadership gets a clear view of cost impact and tradeoffs.
+                The outcome is repeatable cost control and governance: policies are
+                enforced automatically, execution is safe and auditable, and leaders
+                get clear visibility into cost impact and tradeoffs.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -255,8 +265,8 @@ export default function RetentionProgramPage() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="heading-2 text-neutral-900">Outcomes</h2>
             <p className="mt-4 text-neutral-600 leading-relaxed">
-              Designed to be vendor-agnostic. Swap in your platform equivalents
-              (catalog, object store, schedulers, queues, compute).
+              Vendor-agnostic by design. Swap in your platform equivalents (catalog,
+              object store, schedulers, queues, compute).
             </p>
           </div>
 
@@ -264,7 +274,7 @@ export default function RetentionProgramPage() {
             {outcomes.map((o) => {
               const Icon = o.icon;
               return (
-                <div key={o.title} className="card p-6">
+                <div key={o.title} className="card p-6 transition hover:shadow-md hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
                     <div className="rounded-lg border border-neutral-200 bg-neutral-100 p-2">
                       <Icon className="h-4 w-4 text-neutral-900" />
@@ -290,16 +300,25 @@ export default function RetentionProgramPage() {
         <div className="container-custom">
           <div className="grid gap-10 lg:grid-cols-2">
             <div className="card p-8">
-              <h2 className="heading-2 text-neutral-900">Why retention needs guardrails</h2>
-              <p className="mt-4 text-neutral-700 leading-relaxed">
-                Large-scale deletion touches shared infrastructure (metadata catalogs,
-                object stores, APIs). Without guardrails, cleanup jobs can create
-                bursts that degrade query performance or overwhelm downstream services.
-              </p>
-              <p className="mt-4 text-neutral-700 leading-relaxed">
-                This program includes explicit throttling and retry controls so
-                retention is safe to run continuously in production.
-              </p>
+              <div className="flex items-start gap-3">
+                <div className="rounded-lg border border-neutral-200 bg-neutral-100 p-2">
+                  <Gauge className="h-4 w-4 text-neutral-900" />
+                </div>
+                <div>
+                  <h2 className="heading-2 text-neutral-900">
+                    Why retention needs guardrails
+                  </h2>
+                  <p className="mt-4 text-neutral-700 leading-relaxed">
+                    Large-scale deletion touches shared infrastructure (metadata
+                    catalogs, object stores, APIs). Guardrails prevent cleanup bursts
+                    from degrading query performance or overwhelming downstream services.
+                  </p>
+                  <p className="mt-4 text-neutral-700 leading-relaxed">
+                    This program treats throttling and backpressure as first-class
+                    controls so retention can run continuously in production.
+                  </p>
+                </div>
+              </div>
 
               <div className="mt-8 flex flex-wrap gap-2">
                 <Pill>Backpressure</Pill>
@@ -323,12 +342,13 @@ export default function RetentionProgramPage() {
                 ))}
               </ul>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8">
                 <Link
                   href="/programs/retention/architecture"
                   className="inline-flex items-center text-sm font-medium text-primary-600 hover:underline"
                 >
-                  See how guardrails map to the architecture <ArrowRight className="ml-1 h-4 w-4" />
+                  See how guardrails map to the architecture{" "}
+                  <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
             </div>
