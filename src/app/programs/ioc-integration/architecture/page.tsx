@@ -198,8 +198,12 @@ export default function IOCIntegrationArchitecturePage() {
                     <li>• Reproducible, explainable results for audits and reviews</li>
                 </ul>
                 </div>
-                <div className="mt-6 rounded-lg border border-neutral-200 bg-neutral-50 p-4">
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <div className="rounded-xl border border-neutral-200 bg-white p-6">
+                <h3 className="text-sm font-semibold text-neutral-900">
+                    Operating model impact
+                </h3>
+
+                <p className="mt-3 text-sm text-neutral-700 leading-relaxed">
                     Shifts IOC evaluation from ad-hoc, analyst-driven execution to a
                     standardized, platform-owned operating model.
                 </p>
