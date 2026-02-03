@@ -95,6 +95,8 @@ export default function IOCIntegrationArchitecturePage() {
             >
               Back to program <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
+            {/*
++            Cost model intentionally disabled.
             <Link
               href="/programs/ioc-integration/model"
               className="inline-flex items-center justify-center rounded-xl border border-neutral-300 bg-white px-5 py-3 text-sm font-medium text-neutral-900 shadow-sm transition hover:shadow-md"
@@ -102,6 +104,7 @@ export default function IOCIntegrationArchitecturePage() {
               View cost model{" "}
               <ArrowRight className="ml-2 h-4 w-4 text-neutral-500" />
             </Link>
+            */}
           </div>
         </div>
       </section>
