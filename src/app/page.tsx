@@ -1,7 +1,7 @@
 export default function Home() {
   const cards = [
-    { title: "Basin FinOps & Retention", metric: "$10M+/yr", metricLabel: "avoided cost • 76 PB deleted" },
     { title: "IOC Detection Platform", metric: "24 hr → 30 sec", metricLabel: "investigation time" },
+    { title: "Basin FinOps & Retention", metric: "$10M+/yr", metricLabel: "avoided cost • 76 PB deleted" },
     { title: "LLM Cost Simulator", metric: "3 wks → 15 min", metricLabel: "financial analysis cycle" },
     { title: "P&L Automation Platform", metric: "Day 12 → Day 7", metricLabel: "month-end close (MEC)" },
     { title: "CMMI Maturity Uplift", metric: "+0.76", metricLabel: "maturity score increase" },
@@ -40,7 +40,7 @@ export default function Home() {
             Staff Technical Program Manager | Director, Technical Program Management
           </p>
           <div className="inline-flex items-center rounded-md bg-neutral-50 px-3 py-1 text-sm text-neutral-800">
-            Currently: Open to Staff/Senior TPM and Director TPM roles in infrastructure governance, security platforms, and FinOps
+            Currently: Open to Staff/Senior TPM and Director TPM roles in security platforms, infrastructure governance, and FinOps
           </div>
         </section>
         {/* What I Bring */}
@@ -50,24 +50,24 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                title: "Senior TPM Leadership",
-                desc: "20+ years leading security, data, and infrastructure across enterprise environments",
+                title: "Threat Detection & Security Platforms",
+                desc: "Detection engineering platforms, IOC pipelines, security data platforms, and regulated delivery across threat detection, identity, and protection domains.",
               },
               {
-                title: "Cross-Org Program Ownership",
-                desc: "End-to-end ownership of complex initiatives with multi-year roadmaps and executive visibility",
+                title: "Platform Scaling & Governance",
+                desc: "Turning fragmented systems into scalable, well-governed platforms",
               },
               {
                 title: "Platform Modernization",
                 desc: "Legacy-to-cloud transformations across architecture, migration, and governance",
               },
               {
-                title: "Cybersecurity & Risk Programs",
-                desc: "Breach remediation, security data platforms, and regulated delivery across threat, identity, and protection domains"
+                title: "Cross-Org Program Ownership",
+                desc: "End-to-end ownership of complex initiatives with multi-year roadmaps and executive visibility",
               },
               {
-                title: "Platform Scaling & Governance",
-                desc: "Turning fragmented systems into scalable, well-governed platforms",
+                title: "Senior TPM Leadership",
+                desc: "20+ years leading security, data, and infrastructure across enterprise environments",
               },
               {
                 title: "FinOps & Cloud Cost Control",
@@ -160,8 +160,7 @@ export default function Home() {
           <h2 className="mb-3 text-2xl font-semibold">How I Work</h2>
           <div className="mt-2 mb-5 border-t border-neutral-200" />
           <p className="max-w-2xl text-neutral-700">
-            I treat cost, reliability, and scale as design inputs — not after-the-fact optimizations. Strong programs start with clear
-            ownership, measurable outcomes, and simple systems engineers can operate confidently.
+            I treat cost, reliability, scale, and detection fidelity as design inputs — not after-the-fact optimizations. Strong programs start with clear ownership, measurable outcomes, and systems engineers and analysts can operate confidently.
           </p>
         </section>
       </div>
