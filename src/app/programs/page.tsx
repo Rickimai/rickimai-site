@@ -58,17 +58,14 @@ const programs: Program[] = [
     href: "/programs/experian-cybersecurity-maturity",
     companyLabel: "Experian",
     typeLabel: "Security Governance Framework",
-    tags: ["Threat Intel", "Governance"],
+    tags: ["Threat Intel", "Governance", "Security First"],
   },
 ];
 
 function ProgramCard({ p }: { p: Program }) {
   return (
-    <Link
-      href={p.href}
-      className="card group block overflow-hidden bg-white border border-neutral-200 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-    >
-      <div className="p-6 h-full flex-col">
+    <Link href={p.href} className="card group h-full flex flex-col">
+      <div className="flex h-full flex-col">
         {/* Labels */}
         <div className="flex flex-wrap gap-2">
           <span className="rounded-full bg-neutral-800 px-3 py-1 text-xs font-medium text-white">
@@ -88,8 +85,10 @@ function ProgramCard({ p }: { p: Program }) {
         <p className="mt-2 text-sm leading-relaxed text-neutral-600">
           {p.description}
         </p>
+
+        {/* Optional maturity model */}
         {p.maturityModel && (
-          <div className="mt-4 rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+          <div className="mt-4 rounded-xl border border-neutral-200 bg-neutral-50/70 p-4">
             <div className="text-xs font-semibold uppercase tracking-wide text-neutral-600">
               Maturity Model
             </div>
@@ -97,7 +96,8 @@ function ProgramCard({ p }: { p: Program }) {
             <p className="mt-2 text-sm text-neutral-800">
               <span className="font-medium">Scale:</span> {p.maturityModel.scale}
               {" \u00A0•\u00A0 "}
-              <span className="font-medium">Roll-up:</span> {p.maturityModel.rollup}
+              <span className="font-medium">Roll-up:</span>{" "}
+              {p.maturityModel.rollup}
             </p>
 
             <div className="mt-3 flex flex-wrap gap-2">
@@ -136,14 +136,13 @@ function ProgramCard({ p }: { p: Program }) {
         )}
 
         {/* CTA */}
-        <div className="mt-6 mt-auto inline-flex items-center text-sm font-medium text-primary-600">
+        <div className="mt-auto inline-flex items-center text-sm font-medium text-primary-600">
           View program <ArrowRight className="ml-1 h-4 w-4" />
         </div>
       </div>
     </Link>
-      );
+  );
 }
-
 export default function ProgramsPage() {
   return (
     <section className="pt-28 pb-16">
