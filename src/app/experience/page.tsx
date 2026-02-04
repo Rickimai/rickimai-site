@@ -1,12 +1,34 @@
 import { Metadata } from "next";
 import { Building2, Briefcase } from "lucide-react";
 import ExperienceTimeline from "../../components/ExperienceTimeline";
+import ExperienceTimelineExpandable from "../../components/ExperienceTimelineExpandable";
+
 
 export const metadata: Metadata = {
   title: "Experience | Rick Imai",
   description:
     "Professional experience spanning 20+ years in technical program management at AWS, Amazon Stores FinTech, Charles Schwab, and Experian.",
 };
+
+const certifications = [
+  {
+    name: "Project Management Professional (PMP)",
+    issuer: "PMI",
+  },
+  {
+    name: "ITIL Foundation",
+    issuer: "AXELOS",
+  },
+  {
+    name: "Certified ScrumMaster (CSM)",
+    issuer: "Scrum Alliance",
+  },
+  {
+    name: "AWS Certified Cloud Practitioner (ACCP)",
+    issuer: "AWS",
+  },
+];
+
 
 const experiences = [
   {
@@ -112,6 +134,38 @@ const experiences = [
     ],
   },
 ];
+function CertificationsSection() {
+  if (!certifications.length) return null;
+  return (
+    <section className="section-padding border-t border-neutral-200">
+      <div className="container-custom">
+        <h2 className="heading-2 text-center text-neutral-900">
+          Certifications
+        </h2>
+
+        <div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
+          {certifications.map((c) => (
+            <div
+              key={`${c.name}-${c.issuer}`}
+              className="card flex items-center justify-between"
+            >
+              <div>
+                <div className="text-sm font-medium text-neutral-900">
+                  {c.name}
+                </div>
+                <div className="text-xs text-neutral-500">{c.issuer}</div>
+              </div>
+
+              <div className="rounded-md border border-neutral-200 bg-neutral-50 px-2 py-1 text-xs font-medium text-neutral-700">
+                Certified
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function ExperiencePage() {
   return (
@@ -133,47 +187,73 @@ export default function ExperiencePage() {
           </div>
         </div>
       </section>
-
       {/* Timeline Section */}
       <section className="section-padding">
         <div className="container-custom">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-0 top-0 hidden h-full w-px bg-neutral-200 md:left-1/2 md:block md:-translate-x-1/2" />
-
-            <ExperienceTimeline experiences={experiences} />
+              {/* spine */}
+              <div className="absolute left-0 top-0 hidden h-[calc(100%-4rem)] w-px bg-neutral-200 md:left-1/2 md:block md:-translate-x-1/2" />
+            <ExperienceTimelineExpandable experiences={experiences} initialCount={3} />
           </div>
         </div>
       </section>
-
-      {/* Education Section */}
+      {/* Credentials Section */}
       <section className="section-padding border-t border-neutral-200">
         <div className="container-custom">
-          <h2 className="heading-2 text-center text-neutral-900">
-            Education
-          </h2>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {/* Certifications */}
+            <div className="card">
+              <h2 className="text-lg font-semibold text-neutral-900">
+                Certifications
+              </h2>
+              <p className="mt-1 text-sm text-neutral-600">
+                Current certifications and credentials.
+              </p>
 
-          <div className="mx-auto mt-12 max-w-md">
-            <div className="card text-center">
-              <div className="mb-4 inline-flex rounded-lg bg-neutral-100 p-3 text-primary-600">
-                <Building2 className="h-6 w-6" />
+              <div className="mt-6 grid gap-3">
+                {certifications.map((c) => (
+                  <div
+                    key={`${c.name}-${c.issuer}`}
+                    className="flex items-center justify-between rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3"
+                  >
+                    <div>
+                      <div className="text-sm font-medium text-neutral-900">
+                        {c.name}
+                      </div>
+                      <div className="text-xs text-neutral-500">{c.issuer}</div>
+                    </div>
+                    <span className="rounded-md border border-neutral-200 bg-white px-2 py-1 text-xs font-medium text-neutral-700">
+                      Certified
+                    </span>
+                  </div>
+                ))}
               </div>
-
-              <h3 className="heading-3 text-neutral-900">
-                BA, Social Sciences
-              </h3>
-
-              <p className="mt-1 text-neutral-700">
-                University of California, Irvine
+            </div>
+            {/* Education */}
+            <div className="card">
+              <h2 className="text-lg font-semibold text-neutral-900">Education</h2>
+              <p className="mt-1 text-sm text-neutral-600">
+                Formal education and concentration.
               </p>
 
-              <p className="mt-2 text-sm text-neutral-500">
-                Concentration in Information Technology and Business Economics
-              </p>
+              <div className="mt-6 rounded-lg border border-neutral-200 bg-neutral-50 p-4">
+                <div className="text-sm font-medium text-neutral-900">
+                  BA, Social Sciences
+                </div>
+                <div className="mt-1 text-sm text-neutral-700">
+                  University of California, Irvine
+                </div>
+                <div className="mt-2 text-xs text-neutral-500">
+                  Concentration in Information Technology and Business Economics
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
     </>
   );
 }
+
