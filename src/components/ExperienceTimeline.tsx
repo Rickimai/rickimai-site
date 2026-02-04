@@ -19,7 +19,7 @@ export default function ExperienceTimeline({
 }: {
   experiences: Experience[];
 }) {
-  const DEFAULT_VISIBLE = 3;
+  const DEFAULT_VISIBLE = 2;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (

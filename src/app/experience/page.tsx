@@ -194,7 +194,7 @@ export default function ExperiencePage() {
             {/* Timeline line */}
               {/* spine */}
               <div className="absolute left-0 top-0 hidden h-[calc(100%-4rem)] w-px bg-neutral-200 md:left-1/2 md:block md:-translate-x-1/2" />
-            <ExperienceTimelineExpandable experiences={experiences} initialCount={3} />
+            <ExperienceTimelineExpandable experiences={experiences} initialCount={2} />
           </div>
         </div>
       </section>
