@@ -94,11 +94,11 @@ export default function AboutPage() {
 
           <div className="mt-6 space-y-3">
             <div className="flex items-center gap-3 text-neutral-600">
-              <MapPin className="h-5 w-5 text-primary-500" />
+              <MapPin className="h-5 w-5" style={{ color: 'var(--accent)' }} />
               <span>Irvine, CA</span>
             </div>
             <div className="flex items-center gap-3 text-neutral-600">
-              <Briefcase className="h-5 w-5 text-primary-500" />
+              <Briefcase className="h-5 w-5" style={{ color: 'var(--accent)' }} />
               <span>AWS — Senior TPM</span>
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function AboutPage() {
                 key={interest.label}
                 className="flex items-center gap-3 rounded-lg border border-neutral-200 bg-neutral-50 px-5 py-3"
               >
-                <interest.icon className="h-5 w-5 text-primary-600" />
+                <interest.icon className="h-5 w-5" style={{ color: 'var(--accent)' }} />
                 <span className="text-neutral-700">{interest.label}</span>
               </div>
             ))}

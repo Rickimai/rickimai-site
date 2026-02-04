@@ -66,8 +66,8 @@ function Pill({
       ? "border-amber-200 bg-amber-50 text-amber-800"
       : tone === "high"
       ? "border-emerald-200 bg-emerald-50 text-emerald-800"
-      : "border-neutral-200 bg-white text-neutral-700";
-  return <span className={`${base} ${toneCls}`}>{children}</span>;
+      : "border-accent bg-white text-neutral-700";
+  return <span className={`${base} ${toneCls}`} style={{ borderColor: 'var(--accent)' }}>{children}</span>;
 }
 
 function Card({
@@ -491,32 +491,27 @@ export default function Page() {
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-10">
-    <Breadcrumbs
-      items={[
-        { label: "Home", href: "/" },
-        { label: "Programs", href: "/programs" },
-        { label: "Cybersecurity Maturity", href: "/programs/experian-cybersecurity-maturity" },
-      ]}
-    />
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Programs", href: "/programs" },
+          { label: "Cybersecurity Maturity", href: "/programs/experian-cybersecurity-maturity" },
+        ]}
+      />
       {/* Header */}
       <header className="mt-6">
-        <h1 className="text-3xl font-semibold tracking-tight text-neutral-900">
+        <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 relative pb-2">
           Cybersecurity Maturity Program
         </h1>
         <p className="mt-3 text-base text-neutral-700">
-          An enterprise maturity initiative built to ensure security capabilities{" "}
-          <span className="font-medium text-neutral-900">stick</span> — not just
-          ship. Coverage was treated as table stakes. Maturity required measurable
-          outcomes, automation, and operational embedment.
+          An enterprise maturity initiative built to ensure security capabilities <span className="font-medium text-neutral-900">stick</span> — not just ship. Coverage was treated as table stakes. Maturity required measurable outcomes, automation, and operational embedment.
         </p>
-
         <div className="mt-5 flex flex-wrap gap-2">
           <Pill>Coverage</Pill>
           <Pill>Metrics</Pill>
           <Pill>Tech / Automation</Pill>
           <Pill>Process</Pill>
         </div>
-
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="/programs"
@@ -526,98 +521,83 @@ export default function Page() {
           </Link>
         </div>
       </header>
-
       {/* Executive diagram */}
       <div className="mt-10" id="rollup">
         <ExecutiveRollupDiagram />
       </div>
       {/* Narrative cards */}
-        <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-stretch">
-          <Card
-            title="Program Summary"
-            subtitle="Durability-first maturity model used to assess, prioritize, and sustain security capabilities across the enterprise."
-          >
-            <p className="text-sm text-neutral-700 leading-6">
-              The program established a consistent maturity baseline and a repeatable
-              measurement system. Success was defined by whether a capability was
-              deployed <em>and</em> whether it remained effective over time — through
-              org changes, platform growth, and shifting priorities.
-            </p>
-          </Card>
-          <Card
-            title="Operating Principle"
-            subtitle="Coverage is necessary. Maturity is earned."
-          >
-            <ul className="grid gap-2 text-sm text-neutral-700 leading-6">
-              <li>
-                <span className="font-medium text-neutral-900">Coverage</span> confirms
-                the control exists where required.
-              </li>
-              <li>
-                <span className="font-medium text-neutral-900">Metrics</span> prove it
-                works and trends in the right direction.
-              </li>
-              <li>
-                <span className="font-medium text-neutral-900">Tech / Automation</span>{" "}
-                ensures it scales without linear headcount.
-              </li>
-              <li>
-                <span className="font-medium text-neutral-900">Process</span> embeds
-                ownership, workflows, and exception handling.
-              </li>
-            </ul>
-
-            <p className="mt-4 text-sm text-neutral-700 leading-6">
-              A capability was not considered mature unless it demonstrated strength
-              across all four dimensions. Weak dimensions capped maturity to avoid
-              “green dashboards” driven by partial implementation.
-            </p>
-          </Card>
-        </div>
+      <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-stretch">
+        <Card
+          title="Program Summary"
+          subtitle="Durability-first maturity model used to assess, prioritize, and sustain security capabilities across the enterprise."
+        >
+          <p className="text-sm text-neutral-700 leading-6">
+            The program established a consistent maturity baseline and a repeatable measurement system. Success was defined by whether a capability was deployed <em>and</em> whether it remained effective over time — through org changes, platform growth, and shifting priorities.
+          </p>
+        </Card>
+        <Card
+          title="Operating Principle"
+          subtitle="Coverage is necessary. Maturity is earned."
+        >
+          <ul className="grid gap-2 text-sm text-neutral-700 leading-6">
+            <li>
+              <span className="font-medium text-neutral-900">Coverage</span> confirms the control exists where required.
+            </li>
+            <li>
+              <span className="font-medium text-neutral-900">Metrics</span> prove it works and trends in the right direction.
+            </li>
+            <li>
+              <span className="font-medium text-neutral-900">Tech / Automation</span> ensures it scales without linear headcount.
+            </li>
+            <li>
+              <span className="font-medium text-neutral-900">Process</span> embeds ownership, workflows, and exception handling.
+            </li>
+          </ul>
+          <p className="mt-4 text-sm text-neutral-700 leading-6">
+            A capability was not considered mature unless it demonstrated strength across all four dimensions. Weak dimensions capped maturity to avoid “green dashboards” driven by partial implementation.
+          </p>
+        </Card>
+      </div>
       {/* Tables */}
       <div className="mt-10">
         <Card
           title="Maturity Scorecard (Illustrative)"
           subtitle="Single hierarchical view. Each row is scored 1 to 5 per dimension; overall is the average."
         >
-            <ScoreTable caption="Enterprise → Domains → Objectives" rows={rows} />
-
-                {/* Scoring legend */}
-                <div className="mt-4 rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-                    <div className="flex flex-wrap items-center justify-between gap-3">
-                    <p className="text-sm font-medium text-neutral-900">Scoring scale (1–5)</p>
-                    </div>
-
-                    <div className="mt-3 grid gap-2 text-sm text-neutral-700">
-                    <div className="flex gap-3">
-                        <span className="w-10 font-semibold text-neutral-900">1</span>
-                        <span>Ad hoc — inconsistent, manual, dependent on individuals.</span>
-                    </div>
-                    <div className="flex gap-3">
-                        <span className="w-10 font-semibold text-neutral-900">2</span>
-                        <span>Developing — exists in pockets; partial coverage or uneven execution.</span>
-                    </div>
-                    <div className="flex gap-3">
-                        <span className="w-10 font-semibold text-neutral-900">3</span>
-                        <span>Repeatable — defined approach, measured at least quarterly, used operationally.</span>
-                    </div>
-                    <div className="flex gap-3">
-                        <span className="w-10 font-semibold text-neutral-900">4</span>
-                        <span>Managed — automated where possible, continuous monitoring, clear ownership.</span>
-                    </div>
-                    <div className="flex gap-3">
-                        <span className="w-10 font-semibold text-neutral-900">5</span>
-                        <span>Optimized — sustained outcomes, self-service + guardrails, continuously improved.</span>
-                    </div>
-                    </div>
-
-                    <p className="mt-3 text-xs text-neutral-600">
-                    Apply the scale independently per dimension (Coverage, Metrics, Tech/Automation, Process).
-                    </p>
-                </div>
-                </Card>
+          <ScoreTable caption="Enterprise → Domains → Objectives" rows={rows} />
+          {/* Scoring legend */}
+          <div className="mt-4 rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <p className="text-sm font-medium text-neutral-900">Scoring scale (1–5)</p>
+            </div>
+            <div className="mt-3 grid gap-2 text-sm text-neutral-700">
+              <div className="flex gap-3">
+                <span className="w-10 font-semibold text-neutral-900">1</span>
+                <span>Ad hoc — inconsistent, manual, dependent on individuals.</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="w-10 font-semibold text-neutral-900">2</span>
+                <span>Developing — exists in pockets; partial coverage or uneven execution.</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="w-10 font-semibold text-neutral-900">3</span>
+                <span>Repeatable — defined approach, measured at least quarterly, used operationally.</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="w-10 font-semibold text-neutral-900">4</span>
+                <span>Managed — automated where possible, continuous monitoring, clear ownership.</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="w-10 font-semibold text-neutral-900">5</span>
+                <span>Optimized — sustained outcomes, self-service + guardrails, continuously improved.</span>
+              </div>
+            </div>
+            <p className="mt-3 text-xs text-neutral-600">
+              Apply the scale independently per dimension (Coverage, Metrics, Tech/Automation, Process).
+            </p>
+          </div>
+        </Card>
       </div>
-
       {/* Close */}
       <footer className="mt-12 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-semibold text-neutral-900">
@@ -625,16 +605,13 @@ export default function Page() {
         </h2>
         <ul className="mt-3 grid gap-2 text-sm text-neutral-700 leading-6">
           <li>
-            A defensible maturity story that leadership can trust — rooted in
-            evidence, not tooling.
+            A defensible maturity story that leadership can trust — rooted in evidence, not tooling.
           </li>
           <li>
-            Funding decisions anchored to measurable gaps (metrics, automation,
-            and process), not generalized “coverage.”
+            Funding decisions anchored to measurable gaps (metrics, automation, and process), not generalized “coverage.”
           </li>
           <li>
-            Repeatable mechanisms that survive org churn and reduce reliance on
-            heroics.
+            Repeatable mechanisms that survive org churn and reduce reliance on heroics.
           </li>
         </ul>
       </footer>

@@ -16,14 +16,14 @@ export default function NotFound() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link href="/" className="btn-primary">
-              <Home className="h-4 w-4" />
+              <Home className="h-4 w-4" style={{ color: 'var(--accent)' }} />
               Go Home
             </Link>
             <button
               onClick={() => window.history.back()}
               className="btn-secondary"
             >
-              <ArrowLeft className="h-4 w-4" />
+              <ArrowLeft className="h-4 w-4" style={{ color: 'var(--accent)' }} />
               Go Back
             </button>
           </div>

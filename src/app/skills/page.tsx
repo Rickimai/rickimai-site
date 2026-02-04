@@ -185,7 +185,7 @@ export default function SkillsPage() {
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-1.5 text-sm font-medium text-primary-600">
-              <Layers className="h-4 w-4" />
+              <Layers className="h-4 w-4" style={{ color: 'var(--accent)' }} />
               Expertise & Capabilities
             </div>
             <h1 className="heading-1 mt-6 text-neutral-900">Skills</h1>
@@ -253,7 +253,7 @@ export default function SkillsPage() {
             {signatureStrengths.map((item) => (
               <div key={item.title} role="listitem" className="card">
                 <div className="mb-4 inline-flex rounded-lg bg-neutral-100 p-2 text-primary-600">
-                  <item.icon className="h-5 w-5" />
+                  <item.icon className="h-5 w-5" style={{ color: 'var(--accent)' }} />
                 </div>
                 <h3 className="font-semibold text-neutral-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-neutral-400">
@@ -281,7 +281,7 @@ export default function SkillsPage() {
               <div key={bucket.title} className="card">
                 <div className="mb-6 flex items-center gap-3">
                     <div className="rounded-lg bg-neutral-100 p-2 text-primary-600">
-                      <bucket.icon className="h-5 w-5" />
+                      <bucket.icon className="h-5 w-5" style={{ color: 'var(--accent)' }} />
                     </div>
                     <h3 className="heading-3 text-neutral-900">{bucket.title}</h3>
                   </div>
@@ -315,7 +315,7 @@ export default function SkillsPage() {
             {certifications.map((cert) => (
               <div key={cert.name} role="listitem" className="card text-center">
                 <div className="mx-auto mb-4 inline-flex rounded-lg bg-neutral-100 p-3 text-primary-600">
-                  <cert.icon className="h-6 w-6" />
+                  <cert.icon className="h-6 w-6" style={{ color: 'var(--accent)' }} />
                 </div>
                 <h3 className="text-xl font-bold text-neutral-900">{cert.name}</h3>
                 <p className="mt-1 text-sm text-neutral-700">{cert.fullName}</p>
@@ -334,7 +334,7 @@ export default function SkillsPage() {
             <div>
               <div className="flex items-center gap-3">
                 <div className="rounded-lg bg-neutral-100 p-2 text-primary-600">
-                  <GitBranch className="h-5 w-5" />
+                  <GitBranch className="h-5 w-5" style={{ color: 'var(--accent)' }} />
                 </div>
                 <h2 className="heading-3 text-neutral-900">Operating Models</h2>
               </div>
@@ -355,7 +355,7 @@ export default function SkillsPage() {
             <div>
               <div className="flex items-center gap-3">
                 <div className="rounded-lg bg-neutral-100 p-2 text-primary-600">
-                  <Server className="h-5 w-5" />
+                  <Server className="h-5 w-5" style={{ color: 'var(--accent)' }} />
                 </div>
                 <h2 className="heading-3 text-neutral-900">Tools & Platforms</h2>
               </div>
@@ -436,7 +436,7 @@ export default function SkillsPage() {
             ].map((competency) => (
               <div key={competency.title} role="listitem" className="card">
                 <div className="mb-4 inline-flex rounded-lg bg-neutral-100 p-2 text-primary-600">
-                  <competency.icon className="h-5 w-5" />
+                  <competency.icon className="h-5 w-5" style={{ color: 'var(--accent)' }} />
                 </div>
                 <h3 className="font-semibold text-neutral-900">{competency.title}</h3>
                 <p className="mt-2 text-sm text-neutral-400">

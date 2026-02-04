@@ -180,7 +180,7 @@ export default function RetentionArchitecturePage() {
                     <span>Component details</span>
                     <span className="text-neutral-500">(+ principles)</span>
                   </span>
-                  <ChevronDown className="h-4 w-4 text-neutral-500 transition-transform group-open:rotate-180" />
+                  <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" style={{ color: 'var(--accent)' }} />
                 </summary>
 
                 <div className="mt-6 grid gap-6 md:grid-cols-3">

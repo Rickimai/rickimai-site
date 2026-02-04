@@ -82,7 +82,7 @@ export default function Page() {
               className="rounded-lg border border-neutral-200 bg-white p-5"
             >
               <div className="mb-3 flex items-center gap-3">
-                <Icon className="h-5 w-5 text-neutral-700" />
+                <Icon className="h-5 w-5" style={{ color: 'var(--accent)' }} />
                 <h3 className="font-medium">{title}</h3>
               </div>
               <p className="text-sm text-neutral-600">{text}</p>
@@ -110,7 +110,7 @@ export default function Page() {
                     Ingestion flows, enrichment stages, and downstream integrations.
                   </p>
                 </div>
-                <ArrowRight className="h-5 w-5 text-neutral-400 transition group-hover:text-neutral-700 group-hover:translate-x-1"/>
+                <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" style={{ color: 'var(--accent)' }} />
               </div>
             </Link>
           </div>
@@ -128,7 +128,7 @@ export default function Page() {
                 Unit economics and forecasting assumptions for IOC processing.
               </p>
             </div>
-            <ArrowRight className="h-4 w-4 text-neutral-400" />
+            <ArrowRight className="h-4 w-4" style={{ color: 'var(--accent)' }} />
           </Link>
           */}
         </section>

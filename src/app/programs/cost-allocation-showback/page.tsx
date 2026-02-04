@@ -276,7 +276,7 @@ export default function CostAllocationShowbackPage() {
             <div className="card p-8">
               <div className="flex items-start gap-3">
                 <div className="rounded-lg border border-neutral-200 bg-neutral-100 p-2">
-                  <GitBranch className="h-4 w-4 text-neutral-900" />
+                  <GitBranch className="h-4 w-4" style={{ color: 'var(--accent)' }} />
                 </div>
                 <div>
                   <h2 className="heading-2 text-neutral-900">Platform approach</h2>
@@ -307,7 +307,7 @@ export default function CostAllocationShowbackPage() {
             <div className="card p-8">
               <div className="flex items-start gap-3">
                 <div className="rounded-lg border border-neutral-200 bg-neutral-100 p-2">
-                  <Gauge className="h-4 w-4 text-neutral-900" />
+                  <Gauge className="h-4 w-4" style={{ color: 'var(--accent)' }} />
                 </div>
                 <div>
                   <h2 className="heading-2 text-neutral-900">Unit economics</h2>
@@ -371,7 +371,7 @@ export default function CostAllocationShowbackPage() {
                 >
                   <div className="flex items-start gap-3">
                     <div className="rounded-lg border border-neutral-200 bg-neutral-100 p-2">
-                      <Icon className="h-4 w-4 text-neutral-900" />
+                      <Icon className="h-4 w-4" style={{ color: 'var(--accent)' }} />
                     </div>
                     <div>
                       <h3 className="text-sm font-semibold text-neutral-900">

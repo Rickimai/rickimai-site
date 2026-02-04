@@ -69,11 +69,11 @@ export default function ExperienceTimeline({
 
                 <div className="mt-3 flex flex-wrap gap-4 text-sm text-neutral-500">
                   <span className="flex items-center gap-1.5">
-                    <Calendar className="h-4 w-4" />
+                    <Calendar className="h-4 w-4" style={{ color: 'var(--accent)' }} />
                     {exp.period}
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <MapPin className="h-4 w-4" />
+                    <MapPin className="h-4 w-4" style={{ color: 'var(--accent)' }} />
                     {exp.location}
                   </span>
                 </div>

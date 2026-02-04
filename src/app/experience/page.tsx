@@ -175,7 +175,7 @@ export default function ExperiencePage() {
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-1.5 text-sm font-medium text-primary-600">
-              <Briefcase className="h-4 w-4" />
+              <Briefcase className="h-4 w-4" style={{ color: 'var(--accent)' }} />
               Professional Journey
             </div>
             <h1 className="heading-1 mt-6 text-neutral-900">Experience</h1>
