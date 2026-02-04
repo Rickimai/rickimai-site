@@ -80,7 +80,7 @@ function Card({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+    <section className="h-full rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
       <div className="mb-4">
         <h2 className="text-lg font-semibold text-neutral-900">{title}</h2>
         {subtitle ? (
@@ -198,7 +198,7 @@ const objectiveToDomain = [0, 0, 0]; // all three feed IAM (matches your picture
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="text-sm font-semibold text-neutral-900">
-            Maturity Roll-Up
+            Maturity Roll-Up (Illustrative)
           </h3>
           <p className="mt-1 text-xs text-neutral-600">
             Objective scores roll up to Domain, then Enterprise. Weak dimensions
@@ -531,51 +531,49 @@ export default function Page() {
       <div className="mt-10" id="rollup">
         <ExecutiveRollupDiagram />
       </div>
-
       {/* Narrative cards */}
-      <div className="mt-10 grid gap-6">
-        <Card
-          title="Program Summary"
-          subtitle="Durability-first maturity model used to assess, prioritize, and sustain security capabilities across the enterprise."
-        >
-          <p className="text-sm text-neutral-700 leading-6">
-            The program established a consistent maturity baseline and a repeatable
-            measurement system. Success was defined by whether a capability was
-            deployed <em>and</em> whether it remained effective over time — through
-            org changes, platform growth, and shifting priorities.
-          </p>
-        </Card>
+        <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-stretch">
+          <Card
+            title="Program Summary"
+            subtitle="Durability-first maturity model used to assess, prioritize, and sustain security capabilities across the enterprise."
+          >
+            <p className="text-sm text-neutral-700 leading-6">
+              The program established a consistent maturity baseline and a repeatable
+              measurement system. Success was defined by whether a capability was
+              deployed <em>and</em> whether it remained effective over time — through
+              org changes, platform growth, and shifting priorities.
+            </p>
+          </Card>
+          <Card
+            title="Operating Principle"
+            subtitle="Coverage is necessary. Maturity is earned."
+          >
+            <ul className="grid gap-2 text-sm text-neutral-700 leading-6">
+              <li>
+                <span className="font-medium text-neutral-900">Coverage</span> confirms
+                the control exists where required.
+              </li>
+              <li>
+                <span className="font-medium text-neutral-900">Metrics</span> prove it
+                works and trends in the right direction.
+              </li>
+              <li>
+                <span className="font-medium text-neutral-900">Tech / Automation</span>{" "}
+                ensures it scales without linear headcount.
+              </li>
+              <li>
+                <span className="font-medium text-neutral-900">Process</span> embeds
+                ownership, workflows, and exception handling.
+              </li>
+            </ul>
 
-        <Card
-          title="Operating Principle"
-          subtitle="Coverage is necessary. Maturity is earned."
-        >
-          <ul className="grid gap-2 text-sm text-neutral-700 leading-6">
-            <li>
-              <span className="font-medium text-neutral-900">Coverage</span> confirms
-              the control exists where required.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">Metrics</span> prove it
-              works and trends in the right direction.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">Tech / Automation</span>{" "}
-              ensures it scales without linear headcount.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">Process</span> embeds
-              ownership, workflows, and exception handling.
-            </li>
-          </ul>
-          <p className="mt-4 text-sm text-neutral-700 leading-6">
-            A capability was not considered mature unless it demonstrated strength
-            across all four dimensions. Weak dimensions capped maturity to avoid
-            “green dashboards” driven by partial implementation.
-          </p>
-        </Card>
-      </div>
-
+            <p className="mt-4 text-sm text-neutral-700 leading-6">
+              A capability was not considered mature unless it demonstrated strength
+              across all four dimensions. Weak dimensions capped maturity to avoid
+              “green dashboards” driven by partial implementation.
+            </p>
+          </Card>
+        </div>
       {/* Tables */}
       <div className="mt-10">
         <Card
