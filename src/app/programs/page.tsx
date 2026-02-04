@@ -115,7 +115,7 @@ function ProgramCard({ p }: { p: Program }) {
               {p.maturityModel.principle}
             </p>
 
-            <div className="mt-3 inline-flex items-center text-sm font-medium text-primary-600">
+            <div className="mt-3 inline-flex items-center text-sm font-medium text-accent">
               View scoring definitions <ArrowRight className="ml-1 h-4 w-4" />
             </div>
           </div>
@@ -136,7 +136,7 @@ function ProgramCard({ p }: { p: Program }) {
         )}
 
         {/* CTA */}
-        <div className="mt-auto inline-flex items-center text-sm font-medium text-primary-600">
+        <div className="mt-auto inline-flex items-center text-sm font-medium text-accent">
           View program <ArrowRight className="ml-1 h-4 w-4" />
         </div>
       </div>

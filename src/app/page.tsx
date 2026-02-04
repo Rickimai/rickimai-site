@@ -127,28 +127,37 @@ export default function Home() {
               {
                 title: "Infrastructure Governance & FinOps",
                 desc: "Roles owning cost, scale, and reliability across large cloud platforms",
+                icon: "ServerCog",
               },
               {
                 title: "Security Data Platforms",
                 desc: "Programs supporting compliance, detection, and security operations at scale",
+                icon: "ShieldCheck",
               },
               {
                 title: "Portfolio / Program Leadership",
                 desc: "Staff- or Director-level ownership across multiple initiatives and teams",
+                icon: "Briefcase",
               },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-lg border border-neutral-200 bg-neutral-50 p-5 h-full"
-              >
-                <h3 className="mb-2 text-lg font-semibold text-neutral-900">
-                  {item.title}
-                </h3>
-                <p className="text-sm leading-snug text-neutral-600">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+            ].map((item) => {
+              const Icon = require("lucide-react")[item.icon];
+              return (
+                <div
+                  key={item.title}
+                  className="rounded-lg border border-neutral-200 bg-neutral-50 p-5 h-full"
+                >
+                  <div className="mb-2 flex flex-col items-center justify-center">
+                    {Icon && <Icon className="mb-2 h-7 w-7" style={{ color: 'var(--accent)' }} aria-hidden="true" />}
+                    <h3 className="text-lg font-semibold text-neutral-900 text-center">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm leading-snug text-neutral-600">
+                    {item.desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
           <p className="mt-4 max-w-3xl text-sm text-neutral-600">
             Ideal fit: Organizations building large-scale data platforms or formalizing governance and FinOps at enterprise scale.

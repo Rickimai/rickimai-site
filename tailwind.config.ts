@@ -26,6 +26,10 @@ const config: Config = {
           850: "#1f2028",
           950: "#0a0a0b",
         },
+        accent: {
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)",
+        },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

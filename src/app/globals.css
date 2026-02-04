@@ -6,6 +6,8 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+    --accent: #0284c7; /* Accent blue, matches primary-600 */
+    --accent-hover: #0ea5e9; /* Accent hover, matches primary-500 */
   }
 
   .dark {
@@ -76,7 +78,16 @@
 }
 
   .link-hover {
-    @apply text-neutral-600 transition-colors hover:text-primary-600;
+    @apply text-neutral-600 transition-colors underline-offset-2 focus-visible:underline;
+  }
+  .link-hover:hover {
+    color: var(--accent);
+  }
+  .link-hover:focus-visible {
+    color: var(--accent);
+  }
+  .active-link {
+    @apply text-accent underline underline-offset-4 font-medium;
   }
 }
 

@@ -345,7 +345,7 @@ export default function RetentionProgramPage() {
               <div className="mt-8">
                 <Link
                   href="/programs/retention/architecture"
-                  className="inline-flex items-center text-sm font-medium text-primary-600 hover:underline"
+                  className="inline-flex items-center text-sm font-medium text-accent hover:underline"
                 >
                   See how guardrails map to the architecture{" "}
                   <ArrowRight className="ml-1 h-4 w-4" />
