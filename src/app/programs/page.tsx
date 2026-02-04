@@ -66,16 +66,9 @@ function ProgramCard({ p }: { p: Program }) {
   return (
     <Link
       href={p.href}
-      className="
-        card group block overflow-hidden bg-white
-        border border-neutral-300
-        transition
-        hover:-translate-y-0.5
-        hover:border-neutral-400
-        hover:shadow-md
-        "
+      className="card group block overflow-hidden bg-white border border-neutral-200 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
     >
-      <div className="p-6">
+      <div className="p-6 h-full flex-col">
         {/* Labels */}
         <div className="flex flex-wrap gap-2">
           <span className="rounded-full bg-neutral-800 px-3 py-1 text-xs font-medium text-white">
@@ -143,12 +136,12 @@ function ProgramCard({ p }: { p: Program }) {
         )}
 
         {/* CTA */}
-        <div className="mt-6 inline-flex items-center text-sm font-medium text-primary-600">
+        <div className="mt-6 mt-auto inline-flex items-center text-sm font-medium text-primary-600">
           View program <ArrowRight className="ml-1 h-4 w-4" />
         </div>
       </div>
     </Link>
-  );
+      );
 }
 
 export default function ProgramsPage() {
