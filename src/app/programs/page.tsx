@@ -15,6 +15,12 @@ type Program = {
   companyLabel: string;
   typeLabel: string;
   tags: string[];
+  maturityModel?: {
+    scale: "1 to 5";
+    rollup: string;
+    dimensions: string[];
+    principle: string;
+  };
 };
 
 const programs: Program[] = [
@@ -45,13 +51,29 @@ const programs: Program[] = [
     typeLabel: "Security Platform",
     tags: ["Threat Intel", "Pipelines", "Governance"],
   },
+  {
+    title: "Cybersecurity Maturity Program",
+    description:
+      "A durability-first cybersecurity maturity program that measures whether controls stick: coverage, metrics, automation, and process — with roll-up scoring from objective to domain to enterprise.",
+    href: "/programs/experian-cybersecurity-maturity",
+    companyLabel: "Experian",
+    typeLabel: "Security Governance Framework",
+    tags: ["Threat Intel", "Governance"],
+  },
 ];
 
 function ProgramCard({ p }: { p: Program }) {
   return (
     <Link
       href={p.href}
-      className="card group block overflow-hidden bg-white transition hover:-translate-y-0.5 hover:shadow-md"
+      className="
+        card group block overflow-hidden bg-white
+        border border-neutral-300
+        transition
+        hover:-translate-y-0.5
+        hover:border-neutral-400
+        hover:shadow-md
+        "
     >
       <div className="p-6">
         {/* Labels */}
@@ -73,6 +95,38 @@ function ProgramCard({ p }: { p: Program }) {
         <p className="mt-2 text-sm leading-relaxed text-neutral-600">
           {p.description}
         </p>
+        {p.maturityModel && (
+          <div className="mt-4 rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+            <div className="text-xs font-semibold uppercase tracking-wide text-neutral-600">
+              Maturity Model
+            </div>
+
+            <p className="mt-2 text-sm text-neutral-800">
+              <span className="font-medium">Scale:</span> {p.maturityModel.scale}
+              {" \u00A0•\u00A0 "}
+              <span className="font-medium">Roll-up:</span> {p.maturityModel.rollup}
+            </p>
+
+            <div className="mt-3 flex flex-wrap gap-2">
+              {p.maturityModel.dimensions.map((d) => (
+                <span
+                  key={d}
+                  className="rounded-md border border-neutral-200 bg-white px-2 py-1 text-xs text-neutral-700"
+                >
+                  {d}
+                </span>
+              ))}
+            </div>
+
+            <p className="mt-3 text-sm leading-relaxed text-neutral-700">
+              {p.maturityModel.principle}
+            </p>
+
+            <div className="mt-3 inline-flex items-center text-sm font-medium text-primary-600">
+              View scoring definitions <ArrowRight className="ml-1 h-4 w-4" />
+            </div>
+          </div>
+        )}
 
         {/* Tags */}
         {p.tags?.length > 0 && (

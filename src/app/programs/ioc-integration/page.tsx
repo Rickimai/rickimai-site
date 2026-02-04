@@ -92,22 +92,28 @@ export default function Page() {
       </section>
 
       {/* Deep dives */}
-      <section>
-        <h2 className="mb-4 text-xl font-medium">Program deep dives</h2>
-        <div className="space-y-3">
-          <Link
-            href="/programs/ioc-integration/architecture"
-            className="group flex items-center justify-between rounded-lg border p-4 hover:bg-neutral-50"
-          >
-            <div>
-              <h3 className="font-medium">Architecture</h3>
-              <p className="text-sm text-neutral-600">
-                Ingestion flows, enrichment stages, and downstream integrations.
-              </p>
-            </div>
-            <ArrowRight className="h-4 w-4 text-neutral-400 group-hover:text-neutral-600" />
-          </Link>
 
+      <section className="space-y-4">
+        <h2 className="text-xl font-medium">Program deep dives</h2>
+          <div className="max-w-3xl">
+            <Link
+              href="/programs/ioc-integration/architecture"
+              className="group block cursor-pointer rounded-xl border border-neutral-200 bg-white p-6 transition
+                        hover:border-neutral-300 hover:bg-neutral-50
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
+              <div className="flex items-center justify-between gap-6">
+                <div>
+                  <h3 className="text-lg font-medium text-neutral-900">
+                    Architecture
+                  </h3>
+                  <p className="mt-1 text-sm text-neutral-600">
+                    Ingestion flows, enrichment stages, and downstream integrations.
+                  </p>
+                </div>
+                <ArrowRight className="h-5 w-5 text-neutral-400 transition group-hover:text-neutral-700 group-hover:translate-x-1"/>
+              </div>
+            </Link>
+          </div>
           {/*
           Cost model intentionally disabled.
           Restore when the IOC cost model is interview-ready.
@@ -125,8 +131,7 @@ export default function Page() {
             <ArrowRight className="h-4 w-4 text-neutral-400" />
           </Link>
           */}
-        </div>
-      </section>
+        </section>
     </div>
   );
 }
