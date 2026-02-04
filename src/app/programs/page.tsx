@@ -55,7 +55,7 @@ const programs: Program[] = [
     title: "Cybersecurity Maturity Program",
     description:
       "A durability-first cybersecurity maturity program that measures whether controls stick: coverage, metrics, automation, and process — with roll-up scoring from objective to domain to enterprise.",
-    href: "/programs/experian-cybersecurity-maturity",
+    href: "/programs/cybersecurity-maturity",
     companyLabel: "Experian",
     typeLabel: "Security Governance Framework",
     tags: ["Threat Intel", "Governance", "Security First"],
